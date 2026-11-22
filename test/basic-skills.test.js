@@ -69,6 +69,9 @@ test('الملخص اليومي: الأولويات مرتبة (منتهٍ ← �
   const levels = r.priorities.map((p) => p.level);
   assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
   assert.match(r.priorities[0].why, /منتهٍ منذ 3 يوم/);
+  // كل ما يدخل في العدد يظهر في القائمة (لا عدد بلا تفاصيل)
+  assert.equal(r.expiring_within_horizon.length, r.counts.expiring_within_horizon);
+  assert.equal(r.expired_documents.length, r.counts.expired_documents);
   assert.equal(r.today.weekday, 'الأحد');
 });
 

@@ -289,6 +289,8 @@ export const TOOLS = [
         today: describeDate(ctx.today, ctx.today),
         counts: { expired_documents: expired.length, expiring_within_horizon: soon.length, overdue_tasks: overdue.length, tasks_due_today: dueToday.length, open_tasks: tasks.length, pending_approvals: pending.length, stale_transactions: stale.length },
         priorities,
+        expiring_within_horizon: soon.slice(0, 10).map(doc),
+        expired_documents: expired.slice(0, 10).map(doc),
         due_today: dueToday.slice(0, 10).map(task),
         pending_approvals: pending.slice(0, 5).map((a) => ({ action_id: a.id, summary: a.summary })),
       };
