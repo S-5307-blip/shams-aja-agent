@@ -59,4 +59,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const out = path.resolve(path.dirname(config.dbPath), 'dev-tokens.json');
   fs.writeFileSync(out, JSON.stringify(tokens, null, 2));
   console.log(`أُضيفت البيانات التجريبية. رموز الدخول في: ${out}`);
+  // لبيئة التجربة على الخادم فقط (لا يوجد وصول لملفات القرص): الرموز تخص منشآت تجريبية وهمية
+  if (process.env.SEED_PRINT_TOKENS === '1') console.log(`DEMO_TOKENS ${JSON.stringify(tokens)}`);
 }
