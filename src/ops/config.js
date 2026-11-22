@@ -20,6 +20,7 @@ export function loadConfig(overrides = {}) {
     agent: {
       maxSteps: num('AGENT_MAX_STEPS', 8),
       toolTimeoutMs: num('TOOL_TIMEOUT_MS', 15_000),
+      historyTurns: num('AGENT_HISTORY_TURNS', 8),
     },
     // ===== القنوات =====
     channels: {

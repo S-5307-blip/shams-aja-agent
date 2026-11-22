@@ -1,7 +1,7 @@
 // تعريف أدوات الوكيل. لكل أداة: مخطط مدخلات، صلاحية، نمط تنفيذ، ودالة تنفيذ.
 // mode: read = قراءة | write = كتابة مباشرة (منخفضة الخطورة، داخلية) | approval = لا تُنفذ إلا بعد اعتماد بشري
 import { OpsError, sha256 } from '../util.js';
-import { daysBetween, formatHijri } from '../dates.js';
+import { daysBetween, formatHijri, parseDateExpression, describeDate } from '../dates.js';
 import { normalizeArabic, tokenize } from '../kb/index.js';
 import { canTransition, allowedNext, statusLabel, TX_STATUSES, CLOSED_STATUSES } from '../workflow.js';
 import { renewalReminder, missingDocsReminder, followupReminder } from '../messages.js';
@@ -133,9 +133,13 @@ export const TOOLS = [
     run(ctx, { query, phone }) {
       if (!query && !phone) throw new OpsError('invalid_input', 'حدد query أو phone.');
       const rows = ctx.store.findClients(ctx.tenantId, { query, phone });
+      const strong = rows.filter((c) => c.match_quality !== 'partial');
       return {
         count: rows.length,
-        clients: rows.map((c) => ({ client_id: c.id, name: c.name, kind: c.kind, phone: maskPhone(c.phone), cr_number: c.cr_number, opt_out_reminders: !!c.opt_out_reminders })),
+        // أكثر من تطابق قوي = غموض: اسأل الموظف أيهم يقصد قبل أي إجراء
+        ambiguous: strong.length > 1,
+        clients: rows.map((c) => ({ client_id: c.id, name: c.name, kind: c.kind, phone: maskPhone(c.phone), cr_number: c.cr_number, opt_out_reminders: !!c.opt_out_reminders, match: c.match_quality || 'strong' })),
+        hint: rows.length === 0 ? 'لا يوجد عميل مطابق. تأكد من الاسم أو اطلب رقم الجوال أو السجل.' : strong.length > 1 ? 'أكثر من عميل مطابق؛ اسأل الموظف أيهم يقصد.' : undefined,
       };
     },
   },
@@ -216,6 +220,70 @@ export const TOOLS = [
         today: ctx.today,
         count: docs.length,
         documents: docs.map(({ d, info }) => ({ ...info, client_id: d.client_id, client_name: ctx.store.getClient(ctx.tenantId, d.client_id)?.name })),
+      };
+    },
+  },
+  {
+    name: 'resolve_date',
+    description: 'يحوّل تعبيراً زمنياً (بكرة، بعد ٣ أيام، الخميس الجاي، الأسبوع الجاي، نهاية الشهر، ١٥ رجب، 1448/07/01، 2026-12-01) إلى تاريخ ميلادي وهجري واليوم وعدد الأيام من اليوم. استخدمه قبل أي حساب أو إدخال تاريخ؛ لا تحسب التواريخ بنفسك.',
+    permission: 'read',
+    mode: 'read',
+    input_schema: {
+      type: 'object',
+      properties: {
+        expression: { type: 'string', minLength: 1, maxLength: 60 },
+        compare_to: { type: 'string', maxLength: 60, description: 'تعبير ثانٍ اختياري لحساب الفرق بين تاريخين' },
+      },
+      required: ['expression'],
+      additionalProperties: false,
+    },
+    run(ctx, { expression, compare_to }) {
+      const r = parseDateExpression(expression, ctx.today);
+      const out = { today: describeDate(ctx.today, ctx.today), interpretation: r.interpretation, ...describeDate(r.iso, ctx.today) };
+      if (r.to) out.range = { from: describeDate(r.from, ctx.today), to: describeDate(r.to, ctx.today) };
+      if (compare_to) {
+        const b = parseDateExpression(compare_to, ctx.today);
+        out.compare_to = { interpretation: b.interpretation, ...describeDate(b.iso, ctx.today), days_between: daysBetween(r.iso, b.iso) };
+      }
+      return out;
+    },
+  },
+  {
+    name: 'get_daily_overview',
+    description: 'ملخص اليوم مرتباً حسب الأولوية: مستندات منتهية وقريبة الانتهاء، مهام متأخرة ومستحقة اليوم، إجراءات تنتظر الاعتماد، ومعاملات متوقفة. استخدمه لأسئلة مثل «وش عندي اليوم؟» أو «وش الأهم؟».',
+    permission: 'read',
+    mode: 'read',
+    input_schema: { type: 'object', properties: { horizon_days: { type: 'integer', minimum: 1, maximum: 60 } }, additionalProperties: false },
+    run(ctx, { horizon_days = 14 }) {
+      const T = ctx.tenantId;
+      const name = (id) => ctx.store.getClient(T, id)?.name;
+      const docs = ctx.store.trackedDocuments(T).map((d) => ({ ...describeDocument(ctx, d), client_id: d.client_id, client_name: name(d.client_id) }));
+      const expired = docs.filter((d) => d.days_left < 0 && d.status !== 'renewal_in_progress').sort((a, b) => a.days_left - b.days_left);
+      const soon = docs.filter((d) => d.days_left >= 0 && d.days_left <= horizon_days).sort((a, b) => a.days_left - b.days_left);
+      const tasks = ctx.store.listTasks(T, { status: 'open' });
+      const overdue = tasks.filter((t) => t.due_date && t.due_date < ctx.today);
+      const dueToday = tasks.filter((t) => t.due_date === ctx.today);
+      const pending = ctx.store.listActions(T, { status: 'pending_approval' });
+      const staleDays = ctx.config.automation.staleTransactionDays;
+      const stale = ctx.store.openTransactions(T)
+        .map((t) => ({ t, idle: daysBetween((ctx.store.lastEventAt(T, t.id) || t.updated_at).slice(0, 10), ctx.today) }))
+        .filter((x) => x.t.status !== 'on_hold' && x.idle >= staleDays)
+        .sort((a, b) => b.idle - a.idle);
+      const doc = (d) => ({ document_id: d.document_id, client_id: d.client_id, client_name: d.client_name, type_name: d.type_name, holder_name: d.holder_name, expiry_date: d.expiry_date, days_left: d.days_left });
+      const task = (t) => ({ task_id: t.id, title: t.title, due_date: t.due_date, priority: t.priority, client_name: t.client_name });
+      const priorities = [
+        ...expired.map((d) => ({ level: 1, why: `${d.type_name} منتهٍ منذ ${-d.days_left} يوم`, ...doc(d) })),
+        ...overdue.map((t) => ({ level: 2, why: `مهمة متأخرة منذ ${daysBetween(t.due_date, ctx.today)} يوم`, ...task(t) })),
+        ...soon.filter((d) => d.days_left <= 7).map((d) => ({ level: 3, why: `${d.type_name} ينتهي خلال ${d.days_left} يوم`, ...doc(d) })),
+        ...(pending.length ? [{ level: 4, why: `${pending.length} إجراء ينتظر الاعتماد` }] : []),
+        ...stale.map((x) => ({ level: 5, why: `معاملة بلا تحديث منذ ${x.idle} يوم`, transaction_id: x.t.id, title: x.t.title, client_id: x.t.client_id, client_name: name(x.t.client_id) })),
+      ].slice(0, 12);
+      return {
+        today: describeDate(ctx.today, ctx.today),
+        counts: { expired_documents: expired.length, expiring_within_horizon: soon.length, overdue_tasks: overdue.length, tasks_due_today: dueToday.length, open_tasks: tasks.length, pending_approvals: pending.length, stale_transactions: stale.length },
+        priorities,
+        due_today: dueToday.slice(0, 10).map(task),
+        pending_approvals: pending.slice(0, 5).map((a) => ({ action_id: a.id, summary: a.summary })),
       };
     },
   },

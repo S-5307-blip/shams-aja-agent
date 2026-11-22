@@ -10,7 +10,7 @@ before(async () => {
   env = setup({
     script: ({ step }) => step === 0
       ? [toolUse('propose_transaction_status', { transaction_id: env.seed.transactions.txRenew.id, new_status: 'under_review', reason: 'اكتملت المستندات' })]
-      : [toolUse('submit_answer', { answer: 'اقترحت تغيير الحالة وينتظر الاعتماد.', sources: [], missing_info: [], needs_staff: false })],
+      : [toolUse('submit_answer', { understood_request: 'تغيير حالة معاملة فهد', answer: 'اقترحت تغيير الحالة وينتظر الاعتماد.', sources: [], missing_info: [], needs_staff: false })],
   });
   server = createApp(env).listen(0);
   await new Promise((r) => server.once('listening', r));

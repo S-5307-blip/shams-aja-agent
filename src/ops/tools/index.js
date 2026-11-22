@@ -65,7 +65,7 @@ export function createOps({ store, kb, config, channels, extraTools = [], now = 
       status: result.status,
       ms: Date.now() - started,
       input: redact(input),
-      ...(result.ok ? { refs: pickRefs(result.data) } : { error: result.error }),
+      ...(result.ok ? { refs: pickRefs(result.data), entities: extractEntities(result.data) } : { error: result.error }),
     };
     ctx.ledger.push(entry);
     audit(store.db, { tenantId: ctx.tenantId, userId: ctx.user.id, runId: ctx.runId, event: result.ok ? `tool.${result.status}` : 'tool.failed', tool: name, detail: entry });
@@ -203,6 +203,19 @@ export function createOps({ store, kb, config, channels, extraTools = [], now = 
   }
 
   return { tools, ctxFor, toolSchemasFor, executeTool, approveAction, rejectAction, markReminderSent, queueReminder };
+}
+
+// الكيانات التي ظهرت في نتيجة الأداة (لذاكرة المحادثة: «هو»، «المعاملة الثانية»)
+export function extractEntities(data, out = new Map(), depth = 0) {
+  if (!data || typeof data !== 'object' || depth > 4 || out.size >= 15) return [...out.values()];
+  if (Array.isArray(data)) { data.forEach((x) => extractEntities(x, out, depth + 1)); return [...out.values()]; }
+  const add = (type, id, name) => { if (id && !out.has(id)) out.set(id, { type, id, name: name || null }); };
+  if (data.transaction_id && data.title) add('transaction', data.transaction_id, data.title);
+  if (data.document_id && data.type_name) add('document', data.document_id, [data.type_name, data.holder_name, data.client_name].filter(Boolean).join(' — '));
+  if (data.client_id && (data.name || data.client_name)) add('client', data.client_id, data.name || data.client_name);
+  if (data.task_id && data.title) add('task', data.task_id, data.title);
+  for (const v of Object.values(data)) if (v && typeof v === 'object') extractEntities(v, out, depth + 1);
+  return [...out.values()];
 }
 
 function pickRefs(data) {

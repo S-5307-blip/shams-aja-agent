@@ -29,3 +29,9 @@ th { color:var(--muted); font-weight:600; background:#fafafa; }
 ul { margin:4px 0; padding-inline-start:20px; }
 .msg { background:#f9fafb; border:1px dashed var(--line); padding:6px 8px; border-radius:6px; font-size:13px; }
 details summary { cursor:pointer; color:var(--muted); }
+
+#thread .turn { margin:10px 0; }
+#thread .me { background:#fbeee6; border-radius:10px 10px 2px 10px; padding:8px 12px; display:inline-block; max-width:85%; }
+#thread .bot { background:var(--card); border:1px solid var(--line); border-radius:10px 10px 10px 2px; padding:8px 12px; margin-top:6px; white-space:pre-wrap; max-width:85%; margin-inline-start:auto; }
+.understood { color:var(--muted); font-size:14px; margin:0 0 6px; }
+.clarify { background:#fffaeb; border:1px solid #fedf89; border-radius:8px; padding:10px 12px; margin-top:8px; }

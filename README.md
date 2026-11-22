@@ -12,7 +12,8 @@
 npm install
 LLM_PROVIDER=mock npm run ops:seed && LLM_PROVIDER=mock npm run ops:followups && LLM_PROVIDER=mock npm run ops:dev
 # افتح http://localhost:3100/ops/ وادخل برمز demo1_manager من data/dev-tokens.json
-npm test   # 60 اختباراً
+npm test   # 70 اختباراً (بلا مفاتيح)
+npm run eval   # تقييم المهارات الأساسية بالنموذج الحقيقي (يحتاج ANTHROPIC_API_KEY، تكلفة فعلية)
 ```
 
 ---

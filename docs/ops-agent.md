@@ -37,6 +37,7 @@ npm run ops:seed                # بيانات تجريبية وهمية + رم�
 npm run ops:followups           # تشغيل المتابعة الآلية مرة
 npm run ops:dev                 # http://localhost:3100/ops/
 npm test                        # كل الاختبارات (نموذج محاكى، بلا مفاتيح)
+npm run eval                    # تقييم المهارات الأساسية بالنموذج الحقيقي (تكلفة فعلية)
 ```
 ادخل بالواجهة برمز `demo1_manager` (يعتمد) أو `demo1_staff` (يقترح فقط).
 
@@ -56,7 +57,8 @@ npm test                        # كل الاختبارات (نموذج محاك
 ## واجهة HTTP (كلها بـ `Authorization: Bearer <token>`)
 | الطريقة | المسار | الوصف |
 |---|---|---|
-| POST | `/api/agent/ask` | `{ request, request_id }` — نفس `request_id` يعيد النتيجة المحفوظة دون تنفيذ جديد |
+| POST | `/api/agent/ask` | `{ request, request_id, conversation_id }` — نفس `request_id` يعيد النتيجة المحفوظة دون تنفيذ جديد؛ `conversation_id` يكمل محادثة سابقة |
+| GET | `/api/conversations` · `/api/conversations/:id` | محادثات المستخدم وأدوارها |
 | GET | `/api/clients?q=` · `/api/clients/:id` | العملاء |
 | POST | `/api/clients` · `/api/clients/:id/documents` · `/api/transactions` | إدخال بيانات (التاريخ ميلادي أو `expiry_calendar: "hijri"`) |
 | POST | `/api/documents/:id/renew` | تاريخ انتهاء جديد مع `data_source` — يلغي تذكيرات التاريخ القديم |

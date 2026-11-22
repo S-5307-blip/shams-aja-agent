@@ -25,13 +25,16 @@ export const toolUse = (name, input) => ({ type: 'tool_use', id: `toolu_mock_${+
 export const text = (t) => ({ type: 'text', text: t });
 
 // سيناريو افتراضي للتشغيل التجريبي دون مفتاح: يبحث في المعرفة ثم يسلّم إجابة توضّح أنه وضع محاكاة
-async function defaultScript({ messages, step }) {
-  const request = messages[0].content.find?.((b) => b.type === 'text')?.text || '';
-  const query = (request.split('طلب الموظف:')[1] || request).trim().slice(0, 150);
-  if (step === 0) return [toolUse('search_knowledge', { query })];
-  const last = messages.at(-1).content[0];
-  const results = JSON.parse(last.content).data?.results || [];
+async function defaultScript({ messages }) {
+  const last = messages.at(-1);
+  const isToolResult = Array.isArray(last.content) && last.content[0]?.type === 'tool_result';
+  const current = messages.findLast((m) => m.role === 'user' && Array.isArray(m.content) && m.content[0]?.type === 'text');
+  const request = current?.content[0].text || '';
+  const query = (request.split('طلب الموظف:')[1] || request).trim().slice(0, 150) || 'خدمات';
+  if (!isToolResult) return [toolUse('search_knowledge', { query })];
+  const results = JSON.parse(last.content[0].content).data?.results || [];
   return [toolUse('submit_answer', {
+    understood_request: query,
     answer: `[وضع المحاكاة — لا يوجد اتصال بنموذج حقيقي] أقرب نتائج قاعدة المعرفة: ${results.map((r) => r.title).join('، ') || 'لا نتائج'}.`,
     sources: results.slice(0, 3).map((r) => r.id),
     missing_info: [],

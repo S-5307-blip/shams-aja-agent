@@ -3,7 +3,7 @@ const $ = (s) => document.querySelector(s);
 const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 const STATUS = {
-  proposed: ['مقترح', 's-info'], pending_approval: ['ينتظر اعتماداً', 's-wait'], executing: ['جارٍ التنفيذ', 's-info'],
+  needs_clarification: ['يحتاج توضيحاً منك', 's-wait'], proposed: ['مقترح', 's-info'], pending_approval: ['ينتظر اعتماداً', 's-wait'], executing: ['جارٍ التنفيذ', 's-info'],
   succeeded: ['نجح', 's-ok'], done: ['تم', 's-ok'], failed: ['فشل', 's-bad'], rejected: ['مرفوض', 's-muted'],
   duplicate: ['موجود مسبقاً', 's-muted'], skipped: ['تُخطّي', 's-muted'], queued_manual: ['جاهز للإرسال اليدوي', 's-wait'],
   sending: ['جارٍ الإرسال', 's-info'], sent: ['أُرسل', 's-ok'], cancelled: ['ملغى', 's-muted'], open: ['مفتوحة', 's-wait'],
@@ -18,7 +18,7 @@ const APPROVAL = {
 const TOOL = {
   search_knowledge: 'بحث في المعرفة', find_client: 'بحث عن عميل', get_client: 'قراءة ملف عميل', get_transaction: 'قراءة معاملة',
   check_missing_requirements: 'فحص النواقص', list_expiring_documents: 'قائمة الانتهاءات', create_task: 'إنشاء مهمة',
-  prepare_reminder: 'تجهيز تذكير', propose_transaction_status: 'اقتراح تغيير حالة', record_outcome: 'تسجيل نتيجة',
+  prepare_reminder: 'تجهيز تذكير', resolve_date: 'فهم تاريخ', get_daily_overview: 'ملخص اليوم', propose_transaction_status: 'اقتراح تغيير حالة', record_outcome: 'تسجيل نتيجة',
   escalate_to_staff: 'تحويل للمدير', send_reminder: 'إرسال تذكير', llm: 'النموذج',
 };
 const PRIORITY = { urgent: ['عاجل', 's-bad'], high: ['مرتفع', 's-wait'], normal: ['عادي', 's-muted'], low: ['منخفض', 's-muted'] };
@@ -26,6 +26,8 @@ const badge = (map, k) => { const [t, c] = map[k] || [k, 's-muted']; return `<sp
 
 let me = null;
 let lastRequest = null;
+let conversationId = null;
+const CONF = { high: ['ثقة عالية', 's-ok'], medium: ['ثقة متوسطة', 's-wait'], low: ['ثقة منخفضة', 's-bad'] };
 
 async function api(path, opts = {}) {
   const res = await fetch(`/api${path}`, {
@@ -82,7 +84,7 @@ async function refreshCounts() {
 // ===== الطلب =====
 $('#askForm').addEventListener('submit', guard(async (e) => {
   e.preventDefault();
-  lastRequest = { request: $('#request').value.trim(), request_id: crypto.randomUUID() };
+  lastRequest = { request: $('#request').value.trim(), request_id: crypto.randomUUID(), conversation_id: conversationId };
   await send();
 }));
 $('#retryBtn').addEventListener('click', guard(send));
@@ -92,6 +94,11 @@ async function send() {
   $('#result').innerHTML = '<div class="card">الحالة: <span class="badge s-info">جارٍ التنفيذ</span></div>';
   try {
     const r = await api('/agent/ask', { method: 'POST', body: lastRequest });
+    conversationId = r.conversation_id || conversationId;
+    appendTurn(lastRequest.request, r);
+    $('#request').value = '';
+    $('#request').placeholder = r.status === 'needs_clarification' ? 'اكتب جوابك على سؤال الوكيل…' : 'تابع في نفس المحادثة (يتذكر ما سبق)…';
+    $('#newConv').hidden = false;
     renderResult(r);
     $('#retryBtn').hidden = r.status !== 'failed';
   } catch (e) {
@@ -102,11 +109,26 @@ async function send() {
   }
 }
 
+function appendTurn(text, r) {
+  const div = document.createElement('div');
+  div.className = 'turn';
+  div.innerHTML = `<div class="me">${esc(text)}</div><div class="bot">${esc(r.answer)}${r.clarifying_question ? `\n\n❓ ${esc(r.clarifying_question)}` : ''}</div>`;
+  $('#thread').append(div);
+}
+$('#newConv').addEventListener('click', () => {
+  conversationId = null; $('#thread').innerHTML = ''; $('#result').innerHTML = ''; $('#newConv').hidden = true;
+  $('#request').placeholder = 'محادثة جديدة: اكتب طلبك…'; $('#request').focus();
+});
+
 function renderResult(r) {
   const parts = [];
-  parts.push(`<div class="card"><div class="row"><b>النتيجة</b> ${badge(STATUS, r.status)} ${r.replayed ? '<span class="badge s-muted">نتيجة محفوظة لنفس الطلب</span>' : ''}
-    ${r.needs_staff ? `<span class="badge s-wait">يحتاج موظفاً مختصاً${r.staff_reason ? `: ${esc(r.staff_reason)}` : ''}</span>` : ''}</div>
-    <p class="answer">${esc(r.answer)}</p></div>`);
+  parts.push(`<div class="card"><div class="row"><b>النتيجة</b> ${badge(STATUS, r.status)} ${r.confidence ? badge(CONF, r.confidence) : ''}
+    ${r.replayed ? '<span class="badge s-muted">نتيجة محفوظة لنفس الطلب</span>' : ''}
+    ${r.needs_staff && r.status !== 'needs_clarification' ? `<span class="badge s-wait">يحتاج موظفاً مختصاً${r.staff_reason ? `: ${esc(r.staff_reason)}` : ''}</span>` : ''}</div>
+    ${r.understood_request ? `<p class="understood">فهمت طلبك: ${esc(r.understood_request)}</p>` : ''}
+    <p class="answer">${esc(r.answer)}</p>
+    ${r.clarifying_question ? `<div class="clarify"><b>سؤال قبل ما أكمل:</b> ${esc(r.clarifying_question)}<div class="hint">اكتب جوابك في المربع وأرسله؛ الوكيل يتذكر المحادثة.</div></div>` : ''}</div>`);
+  if (r.assumptions?.length) parts.push(`<div class="card"><h3>افتراضات بنيت عليها (صححني إن كانت خطأ)</h3><ul>${r.assumptions.map((a) => `<li>${esc(a)}</li>`).join('')}</ul></div>`);
   if (r.missing_info?.length) parts.push(`<div class="card"><h3>معلومات ناقصة</h3><ul>${r.missing_info.map((m) => `<li>${esc(m)}</li>`).join('')}</ul></div>`);
   if (r.sources?.length) {
     parts.push(`<div class="card"><h3>المصادر المستخدمة</h3><table><tr><th>المعرف</th><th>العنوان</th><th>الاعتماد</th><th>المصدر</th><th>تاريخ التحقق</th></tr>

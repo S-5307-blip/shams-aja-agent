@@ -1,6 +1,21 @@
 // طبقة البيانات. كل دالة تأخذ tenantId وتقيّد الاستعلام به، فلا يمكن الوصول لبيانات منشأة أخرى.
 import crypto from 'node:crypto';
 import { newId, nowIso, sha256, parseJson, OpsError } from './util.js';
+import { normalizeArabic } from './kb/index.js';
+
+const stripAl = (t) => (t.startsWith('ال') && t.length > 4 ? t.slice(2) : t);
+const nameTokens = (s) => normalizeArabic(s).split(/[^\p{L}\p{N}]+/u).filter((t) => t.length > 1).map(stripAl);
+function editDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 1) return 2;
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return d[a.length][b.length];
+}
+// الكلمة تطابق إن كانت بداية الاسم (فهد ← فهد) أو بفارق حرف واحد للكلمات من ٤ أحرف فأكثر
+const tokenMatch = (q, t) => t.startsWith(q) || (q.length >= 4 && editDistance(q, t) <= 1);
 
 const json = (v) => JSON.stringify(v ?? null);
 
@@ -45,17 +60,32 @@ export function createStore(db) {
   }
   const getClient = (tenantId, id) => one('SELECT * FROM clients WHERE tenant_id = ? AND id = ?', tenantId, id);
 
+  // بحث مرن بالاسم: يتجاهل الهمزات والتشكيل و«ال»، ويتسامح مع خطأ حرف واحد في الكلمات الطويلة.
+  // يُرتب: تطابق تام ← كل الكلمات ← بعضها. كما يطابق رقم السجل وآخر ٤ أرقام الهوية والجوال.
   function findClients(tenantId, { query, phone, limit = 10 }) {
     if (phone) {
       const digits = String(phone).replace(/\D/g, '').replace(/^0/, '966');
       return all('SELECT * FROM clients WHERE tenant_id = ? AND phone LIKE ? LIMIT ?', tenantId, `%${digits.slice(-9)}`, limit);
     }
-    const q = `%${String(query || '').trim()}%`;
-    return all(
-      `SELECT * FROM clients WHERE tenant_id = ? AND (name LIKE ? OR cr_number LIKE ? OR id_last4 = ? OR phone LIKE ?)
-       ORDER BY updated_at DESC LIMIT ?`,
-      tenantId, q, q, String(query || '').trim(), q, limit
-    );
+    const raw = String(query || '').trim();
+    const digits = raw.replace(/\D/g, '');
+    const qTokens = nameTokens(raw);
+    const scored = [];
+    for (const c of all('SELECT * FROM clients WHERE tenant_id = ?', tenantId)) {
+      let score = 0;
+      if (digits.length >= 4 && (c.cr_number?.includes(digits) || c.id_last4 === digits || c.phone?.endsWith(digits))) score = 100;
+      else if (qTokens.length) {
+        const n = nameTokens(c.name);
+        if (n.join(' ') === qTokens.join(' ')) score = 90;
+        else {
+          const hits = qTokens.filter((q) => n.some((t) => tokenMatch(q, t))).length;
+          if (hits === qTokens.length) score = 60 + hits;
+          else if (hits > 0 && qTokens.length > 1) score = 20 + hits;
+        }
+      }
+      if (score) scored.push({ c, score });
+    }
+    return scored.sort((a, b) => b.score - a.score).slice(0, limit).map((x) => ({ ...x.c, match_quality: x.score >= 60 ? 'strong' : 'partial' }));
   }
   const listClients = (tenantId, limit = 200) => all('SELECT * FROM clients WHERE tenant_id = ? ORDER BY name LIMIT ?', tenantId, limit);
 
@@ -246,12 +276,32 @@ export function createStore(db) {
     run('UPDATE actions SET status = ?, result = ?, error = ?, idempotency_key = NULL, updated_at = ? WHERE tenant_id = ? AND id = ?', status, json(result), error, nowIso(), tenantId, id);
 
   // ===== تشغيلات الوكيل =====
-  function createRun(tenantId, { userId, requestId, request, model }) {
+  function createRun(tenantId, { userId, requestId, request, model, conversationId }) {
     const id = newId('run');
-    run('INSERT INTO agent_runs (id, tenant_id, user_id, request_id, request, status, model, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-      id, tenantId, userId, requestId || null, request, 'running', model, nowIso());
+    run('INSERT INTO agent_runs (id, tenant_id, user_id, request_id, request, status, model, conversation_id, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      id, tenantId, userId, requestId || null, request, 'running', model, conversationId || null, nowIso());
     return id;
   }
+
+  // ===== المحادثات (خاصة بالمستخدم داخل منشأته) =====
+  function createConversation(tenantId, userId, title) {
+    const id = newId('conv');
+    const t = nowIso();
+    run('INSERT INTO conversations (id, tenant_id, user_id, title, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)', id, tenantId, userId, title?.slice(0, 80) || null, t, t);
+    return getConversation(tenantId, userId, id);
+  }
+  const getConversation = (tenantId, userId, id) =>
+    one('SELECT * FROM conversations WHERE tenant_id = ? AND user_id = ? AND id = ?', tenantId, userId, id);
+  const listConversations = (tenantId, userId, limit = 20) =>
+    all('SELECT * FROM conversations WHERE tenant_id = ? AND user_id = ? ORDER BY updated_at DESC LIMIT ?', tenantId, userId, limit);
+  function addTurn(tenantId, conversationId, { runId, userText, assistantText, entities }) {
+    run('INSERT INTO conversation_turns (tenant_id, conversation_id, run_id, user_text, assistant_text, entities, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      tenantId, conversationId, runId, userText, assistantText, json(entities || []), nowIso());
+    run('UPDATE conversations SET updated_at = ? WHERE tenant_id = ? AND id = ?', nowIso(), tenantId, conversationId);
+  }
+  const recentTurns = (tenantId, conversationId, limit = 10) =>
+    all('SELECT run_id, user_text, assistant_text, entities, created_at FROM conversation_turns WHERE tenant_id = ? AND conversation_id = ? ORDER BY id DESC LIMIT ?',
+      tenantId, conversationId, limit).reverse().map((r) => ({ ...r, entities: parseJson(r.entities, []) }));
   const finishRun = (tenantId, id, { status, response, error, usage }) =>
     run('UPDATE agent_runs SET status = ?, response = ?, error = ?, usage = ?, finished_at = ? WHERE tenant_id = ? AND id = ?',
       status, json(response), error || null, json(usage), nowIso(), tenantId, id);
@@ -272,5 +322,6 @@ export function createStore(db) {
     createReminder, getReminder, listReminders, updateReminder, cancelPendingReminders,
     createAction, getAction, listActions, claimAction, finishAction,
     createRun, finishRun, getRun, getRunByRequestId,
+    createConversation, getConversation, listConversations, addTurn, recentTurns,
   };
 }

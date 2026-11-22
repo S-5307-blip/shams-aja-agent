@@ -32,11 +32,13 @@
     <div id="flash" role="status" hidden></div>
 
     <section id="tab-ask" class="tab">
+      <div id="thread"></div>
       <form id="askForm">
-        <textarea id="request" rows="3" placeholder="مثال: ما نواقص معاملة تجديد إقامة فهد؟ جهّز له تذكيراً بالنواقص." required></textarea>
+        <textarea id="request" rows="3" placeholder="اكتب كما تكلم زميلك: وش عندي اليوم؟ — وش ناقص معاملة فهد؟ جهز له تذكير — متى تخلص إقامة العامل حق النخبة؟" required></textarea>
         <div class="row">
           <button id="askBtn">إرسال الطلب</button>
           <button type="button" id="retryBtn" class="secondary" hidden>إعادة المحاولة (نفس الطلب)</button>
+          <button type="button" id="newConv" class="secondary" hidden>محادثة جديدة</button>
           <span class="hint">لا يُرسل أي شيء للعميل ولا تتغير أي حالة دون اعتماد مدير.</span>
         </div>
       </form>

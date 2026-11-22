@@ -8,7 +8,7 @@ import { echoableContent } from '../src/ops/llm/index.js';
 import { OpsError } from '../src/ops/util.js';
 
 const lastResult = (messages) => JSON.parse(messages.at(-1).content[0].content);
-const submit = (o) => toolUse('submit_answer', { sources: [], missing_info: [], needs_staff: false, ...o });
+const submit = (o) => toolUse('submit_answer', { understood_request: 'طلب اختبار', sources: [], missing_info: [], needs_staff: false, ...o });
 
 test('طلب طبيعي: بحث عميل ← نواقص ← تذكير ← إجابة بمصادر وإجراء ينتظر الاعتماد', async () => {
   const env = setup({

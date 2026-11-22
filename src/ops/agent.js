@@ -12,7 +12,7 @@ const WRITE_MODES = new Set(['write', 'approval']);
 const CLAIM_SENT = /(تم|تمّ)\s+(إرسال|ارسال|تغيير|تحديث|اعتماد)|أُرسل(ت)?\s/;
 
 export function createAgent({ store, kb, ops, llm, config }) {
-  async function ask(user, { request, requestId } = {}) {
+  async function ask(user, { request, requestId, conversationId } = {}) {
     if (!can(user.role, 'agent.ask')) throw new OpsError('forbidden', 'ليست لديك صلاحية استخدام الوكيل.');
     if (typeof request !== 'string' || request.trim().length < 2 || request.length > 4000) {
       throw new OpsError('invalid_input', 'نص الطلب مطلوب (حتى ٤٠٠٠ حرف).');
@@ -22,19 +22,36 @@ export function createAgent({ store, kb, ops, llm, config }) {
       const prev = store.getRunByRequestId(user.tenant_id, requestId);
       if (prev) return replay(prev);
     }
+    // المحادثة تخص المستخدم نفسه داخل منشأته؛ محادثة غيره = غير موجودة
+    let conversation;
+    if (conversationId) {
+      conversation = store.getConversation(user.tenant_id, user.id, conversationId);
+      if (!conversation) throw new OpsError('not_found', 'المحادثة غير موجودة.');
+    } else {
+      conversation = store.createConversation(user.tenant_id, user.id, request);
+    }
     let runId;
     try {
-      runId = store.createRun(user.tenant_id, { userId: user.id, requestId, request, model: llm.model });
+      runId = store.createRun(user.tenant_id, { userId: user.id, requestId, request, model: llm.model, conversationId: conversation.id });
     } catch (e) {
       if (requestId && String(e.message).includes('UNIQUE')) return replay(store.getRunByRequestId(user.tenant_id, requestId));
       throw e;
     }
     const ctx = ops.ctxFor(user, { runId });
+    ctx.conversationId = conversation.id;
+    ctx.request = request;
     audit(store.db, { tenantId: user.tenant_id, userId: user.id, runId, event: 'agent.request', detail: { request } });
 
     const snippets = kb.search(request, { limit: 5 });
     snippets.forEach((s) => ctx.citable.add(s.id));
-    const messages = [{ role: 'user', content: [{ type: 'text', text: userMessage(ctx, request, snippets) }] }];
+    // سياق المحادثة: الأدوار السابقة نصاً (طلب الموظف + إجابة الوكيل + الكيانات المذكورة)
+    const history = store.recentTurns(user.tenant_id, conversation.id, config.agent.historyTurns ?? 8);
+    const messages = [];
+    for (const t of history) {
+      messages.push({ role: 'user', content: t.user_text });
+      messages.push({ role: 'assistant', content: t.assistant_text + entitiesNote(t.entities) });
+    }
+    messages.push({ role: 'user', content: [{ type: 'text', text: userMessage(ctx, request, snippets, history.length) }] });
     const tools = [...ops.toolSchemasFor(user.role), SUBMIT_TOOL];
     const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0 };
     let final = null;
@@ -83,7 +100,8 @@ export function createAgent({ store, kb, ops, llm, config }) {
 
     const response = buildResponse(ctx, { final, lastText, warnings, steps, usage });
     // ضمان التحويل: إن قرر الوكيل أن الحالة تحتاج موظفاً ولم يحوّلها فعلاً، نحوّلها برمجياً
-    if (response.needs_staff && !ctx.ledger.some((l) => l.tool === 'escalate_to_staff' && l.ok) && can(user.role, 'task.write')) {
+    // (إلا إذا كان ينتظر جواب سؤال توضيحي من الموظف نفسه)
+    if (response.needs_staff && response.status !== 'needs_clarification' && !ctx.ledger.some((l) => l.tool === 'escalate_to_staff' && l.ok) && can(user.role, 'task.write')) {
       const r = await ops.executeTool(ctx, 'escalate_to_staff', {
         reason: 'other',
         summary: `طلب الموظف: ${request.slice(0, 400)}\nسبب التحويل: ${response.staff_reason || 'غير محدد'}`.slice(0, 1000),
@@ -92,6 +110,7 @@ export function createAgent({ store, kb, ops, llm, config }) {
       response.actions = actionsFrom(ctx);
       response.auto_escalated = r.ok;
     }
+    rememberTurn(ctx, response);
     store.finishRun(user.tenant_id, runId, { status: 'succeeded', response, usage });
     audit(store.db, { tenantId: user.tenant_id, userId: user.id, runId, event: 'agent.response', detail: { needs_staff: response.needs_staff, actions: response.actions.length, steps } });
     return response;
@@ -109,12 +128,19 @@ export function createAgent({ store, kb, ops, llm, config }) {
     if (CLAIM_SENT.test(answer) && !confirmed) {
       warnings.push('نص الإجابة يذكر تنفيذ إرسال أو تغيير لم تؤكده الأدوات. المعتمد هو قائمة الإجراءات أدناه.');
     }
+    const clarifying = final?.clarifying_question?.trim() || '';
     return {
       run_id: ctx.runId,
-      status: 'succeeded',
+      conversation_id: ctx.conversationId,
+      status: clarifying ? 'needs_clarification' : 'succeeded',
       today: ctx.today,
+      understood_request: final?.understood_request || null,
       answer,
+      clarifying_question: clarifying || null,
+      assumptions: final?.assumptions || [],
+      confidence: final?.confidence || null,
       needs_staff: Boolean(final ? final.needs_staff : true),
+      entities: collectEntities(ctx),
       staff_reason: final?.staff_reason || (final ? '' : 'لم تكتمل معالجة الطلب آلياً'),
       missing_info: final?.missing_info || [],
       sources: valid.map((id) => sourceInfo(id)),
@@ -154,6 +180,7 @@ export function createAgent({ store, kb, ops, llm, config }) {
     }
     const response = {
       run_id: runId,
+      conversation_id: ctx.conversationId,
       status: 'failed',
       today: ctx.today,
       error,
@@ -170,9 +197,15 @@ export function createAgent({ store, kb, ops, llm, config }) {
       model: llm.model,
       usage,
     };
+    rememberTurn(ctx, response);
     store.finishRun(user.tenant_id, runId, { status: 'failed', response, error: error.message, usage });
     audit(store.db, { tenantId: user.tenant_id, userId: user.id, runId, event: 'agent.failed', detail: error });
     return response;
+  }
+
+  function rememberTurn(ctx, response) {
+    const text = [response.answer, response.clarifying_question ? `سؤالي: ${response.clarifying_question}` : ''].filter(Boolean).join('\n');
+    store.addTurn(ctx.tenantId, ctx.conversationId, { runId: ctx.runId, userText: ctx.request, assistantText: text, entities: response.entities || collectEntities(ctx) });
   }
 
   function replay(run) {
@@ -183,7 +216,19 @@ export function createAgent({ store, kb, ops, llm, config }) {
   return { ask };
 }
 
-function userMessage(ctx, request, snippets) {
+function collectEntities(ctx) {
+  const map = new Map();
+  for (const l of ctx.ledger) for (const e of l.entities || []) if (!map.has(e.id)) map.set(e.id, e);
+  return [...map.values()].slice(0, 20);
+}
+
+const TYPE_LABEL = { client: 'عميل', transaction: 'معاملة', document: 'مستند', task: 'مهمة' };
+function entitiesNote(entities) {
+  if (!entities?.length) return '';
+  return `\n[الكيانات المذكورة: ${entities.map((e, i) => `${i + 1}) ${TYPE_LABEL[e.type] || e.type}: ${e.name || ''} (${e.id})`).join('، ')}]`;
+}
+
+function userMessage(ctx, request, snippets, priorTurns = 0) {
   const kbBlock = snippets.length
     ? snippets.map((s) => JSON.stringify({ id: s.id, type: s.type, approval: s.approval, source: s.source?.name, checked_at: s.checked_at, content: s.content })).join('\n')
     : 'لا توجد نتائج مطابقة في قاعدة المعرفة.';
@@ -191,6 +236,7 @@ function userMessage(ctx, request, snippets) {
 اليوم: ${ctx.today} (${formatHijri(ctx.today)}) — المنطقة الزمنية: ${ctx.tenant.timezone}
 المنشأة: ${ctx.tenant.name}
 المستخدم: ${ctx.user.name} (الدور: ${ctx.user.role})
+${priorTurns ? `هذه رسالة متابعة في محادثة سابقة (${priorTurns} دور سابق أعلاه).` : 'بداية محادثة جديدة.'}
 </context>
 <knowledge_snippets>
 ${kbBlock}

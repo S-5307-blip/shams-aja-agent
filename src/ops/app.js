@@ -104,7 +104,15 @@ export function createApp({ store, kb, ops, agent, config }) {
   api.get('/me', wrap((req) => ({ user: req.user, tenant: store.getTenant(T(req)), today: ctx(req).today })));
 
   // ===== الوكيل =====
-  api.post('/agent/ask', need('agent.ask'), wrap((req) => agent.ask(req.user, { request: req.body?.request, requestId: req.body?.request_id })));
+  api.post('/agent/ask', need('agent.ask'), wrap((req) => agent.ask(req.user, {
+    request: req.body?.request, requestId: req.body?.request_id, conversationId: req.body?.conversation_id || undefined,
+  })));
+  api.get('/conversations', need('agent.ask'), wrap((req) => store.listConversations(T(req), req.user.id)));
+  api.get('/conversations/:id', need('agent.ask'), wrap((req) => {
+    const c = store.getConversation(T(req), req.user.id, req.params.id);
+    if (!c) throw new OpsError('not_found', 'المحادثة غير موجودة.');
+    return { conversation: c, turns: store.recentTurns(T(req), c.id, 50) };
+  }));
   api.get('/runs/:id', need('read'), wrap((req) => {
     const run = store.getRun(T(req), req.params.id);
     if (!run) throw new OpsError('not_found', 'التشغيل غير موجود.');
