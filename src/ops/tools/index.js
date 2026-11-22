@@ -106,7 +106,8 @@ export function createOps({ store, kb, config, channels, extraTools = [], now = 
         run_id: ctx.runId,
       });
       store.updateReminder(ctx.tenantId, reminder.id, { action_id: action.id });
-      return { _status: 'pending_approval', reminder_id: reminder.id, action_id: action.id, channel, message: built.message, note: 'جُهّز التذكير ولم يُرسل؛ ينتظر اعتماد مدير.' };
+      const channelLabel = channel === 'whatsapp' ? 'واتساب (يُرسل تلقائياً بعد الاعتماد)' : 'إرسال يدوي (بعد الاعتماد يرسله الموظف بنفسه)';
+      return { _status: 'pending_approval', reminder_id: reminder.id, action_id: action.id, channel, channel_label: channelLabel, message: built.message, note: `جُهّز التذكير ولم يُرسل؛ ينتظر اعتماد مدير. القناة: ${channelLabel}.` };
     });
   }
 

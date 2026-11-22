@@ -184,3 +184,12 @@ test('سجل التدقيق لا يحتوي أرقام جوال كاملة', asy
   const rows = env.store.db.prepare('SELECT detail FROM audit_log').all().map((r) => r.detail).join('\n');
   assert.doesNotMatch(rows, /500000001/);
 });
+
+test('حالة المستند تُحسب من التاريخ عند القراءة حتى لو لم تعمل المتابعة', async () => {
+  const env = setup(); // بلا تشغيل runFollowups: الحالات المخزنة كلها «valid»
+  const ctx = env.ops.ctxFor(env.user('demo1_staff'));
+  const r = await env.ops.executeTool(ctx, 'get_client', { client_id: env.seed.clients.biz.id });
+  const byType = Object.fromEntries(r.data.documents.map((d) => [d.type, d.status]));
+  assert.equal(byType.health_insurance, 'expired');
+  assert.equal(byType.iqama, 'expiring');
+});

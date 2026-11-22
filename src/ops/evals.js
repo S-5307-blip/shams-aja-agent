@@ -38,7 +38,7 @@ export function grade(c, results) {
 export async function runEvalSuite({ config, only, onCase = () => {} }) {
   const suite = loadSuite();
   const cases = suite.cases.filter((c) => !only?.length || only.includes(c.id));
-  const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0 };
+  const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
   const report = [];
   for (const c of cases) {
     const started = Date.now();

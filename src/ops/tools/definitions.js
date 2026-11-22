@@ -25,6 +25,13 @@ function mustDoc(ctx, id) {
   return d;
 }
 
+// الحالة تُحسب من التاريخ عند كل قراءة (لا تنتظر تشغيل المتابعة اليومية)، عدا «تجديد جارٍ» و«مؤرشف»
+export function effectiveStatus(d, days, type) {
+  if (['renewal_in_progress', 'archived'].includes(d.status) || days === null) return d.status;
+  if (days < 0) return 'expired';
+  return days <= Math.max(...(type?.reminder_offsets_days || [30])) ? 'expiring' : 'valid';
+}
+
 export function describeDocument(ctx, d) {
   const type = ctx.kb.docType(d.doc_type);
   const days = d.expiry_date ? daysBetween(ctx.today, d.expiry_date) : null;
@@ -38,7 +45,7 @@ export function describeDocument(ctx, d) {
     expiry_hijri: d.expiry_date ? formatHijri(d.expiry_date) : null,
     date_meaning: type?.date_meaning || 'تاريخ الانتهاء',
     days_left: days,
-    status: d.status,
+    status: effectiveStatus(d, days, type),
     data_source: d.data_source,
     verified_at: d.verified_at,
     renewal_service_id: type?.renewal_service_id || null,

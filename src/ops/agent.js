@@ -53,7 +53,7 @@ export function createAgent({ store, kb, ops, llm, config }) {
     }
     messages.push({ role: 'user', content: [{ type: 'text', text: userMessage(ctx, request, snippets, history.length) }] });
     const tools = [...ops.toolSchemasFor(user.role), SUBMIT_TOOL];
-    const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0 };
+    const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
     let final = null;
     let lastText = '';
     let steps = 0;
