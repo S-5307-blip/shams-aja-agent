@@ -1,0 +1,40 @@
+{
+  "_note": "قوالب للتقديم في Meta (WhatsApp Manager ← Message templates). تحدد Meta الفئة النهائية عند الاعتماد. الأمثلة (example) مطلوبة عند التقديم.",
+  "templates": [
+    {
+      "name": "order_received", "language": "ar", "category": "UTILITY",
+      "body": "تم استلام طلبك رقم {{1}} لخدمة {{2}}. يمكنك متابعته من: {{3}}",
+      "example": ["1042", "تجديد هوية مقيم", "https://www.shmsaja.sa"]
+    },
+    {
+      "name": "order_status_update", "language": "ar", "category": "UTILITY",
+      "body": "تحديث طلبك {{1}}: الحالة الآن «{{2}}». نحن بخدمتك لأي استفسار.",
+      "example": ["1042", "قيد التنفيذ"]
+    },
+    {
+      "name": "order_completed", "language": "ar", "category": "UTILITY",
+      "body": "تم إنجاز طلبك {{1}} بنجاح. شكراً لثقتك بشمس أجا.",
+      "example": ["1042"]
+    },
+    {
+      "name": "quote_followup", "language": "ar", "category": "MARKETING",
+      "body": "أهلاً {{1}}، عرض السعر لخدمة {{2}} ما زال متاحاً. هل لديك استفسار؟ للإيقاف أرسل «إيقاف».",
+      "example": ["محمد", "نقل خدمات"]
+    },
+    {
+      "name": "renewal_reminder", "language": "ar", "category": "MARKETING",
+      "body": "تذكير: {{1}} ينتهي بتاريخ {{2}}. نساعدك في تجديده قبل الانتهاء. هل تودّ ذلك؟ للإيقاف أرسل «إيقاف».",
+      "example": ["الإقامة", "2026-12-01"]
+    },
+    {
+      "name": "review_request", "language": "ar", "category": "MARKETING",
+      "body": "نسعد بتقييمك لتجربتك مع شمس أجا: {{1}}. رأيك يساعدنا نخدمك أفضل. للإيقاف أرسل «إيقاف».",
+      "example": ["https://www.shmsaja.sa"]
+    },
+    {
+      "name": "offer_campaign", "language": "ar", "category": "MARKETING",
+      "body": "عرض من شمس أجا: {{1}}. للتفاصيل أرسل «أريد»، وللإيقاف أرسل «إيقاف».",
+      "example": ["خدمة مميزة بسعر خاص"]
+    }
+  ]
+}

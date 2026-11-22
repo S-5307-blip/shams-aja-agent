@@ -1,0 +1,17 @@
+{
+  "name": "shams-aja-whatsapp-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "مساعد شمس أجا الذكي: وكيل واتساب (المرحلة الأولى: اقتراح الردود بموافقة المالك)",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env src/server.js"
+  },
+  "engines": { "node": ">=20.6" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "better-sqlite3": "^11.5.0",
+    "express": "^4.21.0"
+  }
+}

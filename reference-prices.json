@@ -1,0 +1,25 @@
+{
+  "_note": "أسعار مرجعية من الملف. غير محمّلة في الوكيل حتى تعتمدها.",
+  "prices": [
+    {
+      "id": "business-setup-001",
+      "name": "قيد سجل تجاري لمؤسسة فردية",
+      "referencePriceSAR": 465.0
+    },
+    {
+      "id": "business-setup-023",
+      "name": "تصديق خطاب إلكتروني",
+      "referencePriceSAR": 95.0
+    },
+    {
+      "id": "residency-002",
+      "name": "تجديد هوية مقيم",
+      "referencePriceSAR": 180.0
+    },
+    {
+      "id": "wages-insurance-011",
+      "name": "رفع ملف حماية الأجور",
+      "referencePriceSAR": 290.0
+    }
+  ]
+}
