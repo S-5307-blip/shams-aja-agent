@@ -49,7 +49,9 @@ export async function proposeReply(phone) {
     max_tokens: 1000,
     system: [{ type: 'text', text: buildSystemPrompt(), cache_control: { type: 'ephemeral' } }],
     tools: [proposeTool],
-    tool_choice: { type: 'tool', name: 'propose_reply' },
+    // النماذج الحالية (Sonnet 5.5 / Opus 5.5) ترفض فرض أداة بعينها (tool_choice: tool) بخطأ 400.
+    // نستخدم auto، والتعليمات تطلب التسليم عبر propose_reply، ونتحقق أدناه من وجود الاستدعاء.
+    tool_choice: { type: 'auto' },
     messages,
   });
 

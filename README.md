@@ -1,4 +1,23 @@
-# مساعد شمس أجا الذكي — وكيل واتساب (المرحلة الأولى)
+# مساعد شمس أجا الذكي
+
+يتكون المشروع من وكيلين مستقلين:
+
+| الوكيل | لمن | التشغيل | التوثيق |
+|---|---|---|---|
+| **وكيل واتساب** (المرحلة الأولى) | عملاء المكتب: يقترح الردود ويعتمدها المالك | `npm start` | هذا الملف |
+| **وكيل عمليات المكتب** | موظفو المكتب: العملاء، المعاملات، المستندات، التجديدات، التذكيرات، المهام | `npm run ops:dev` ثم `/ops/` | [docs/ops-agent.md](docs/ops-agent.md) · [docs/skills.md](docs/skills.md) · [docs/deployment.md](docs/deployment.md) · [knowledge/README.md](knowledge/README.md) |
+
+### تشغيل سريع لوكيل العمليات (بلا مفاتيح)
+```bash
+npm install
+LLM_PROVIDER=mock npm run ops:seed && LLM_PROVIDER=mock npm run ops:followups && LLM_PROVIDER=mock npm run ops:dev
+# افتح http://localhost:3100/ops/ وادخل برمز demo1_manager من data/dev-tokens.json
+npm test   # 60 اختباراً
+```
+
+---
+
+# وكيل واتساب (المرحلة الأولى)
 
 ## ماذا ينجز هذا الإصدار
 - يستقبل رسائل العملاء عبر WhatsApp Cloud API مباشرة من Meta.

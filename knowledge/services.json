@@ -1,0 +1,3841 @@
+{
+  "_meta": {
+    "description": "خدمات المكتب المنشورة. مولّد آلياً بـ scripts/build-kb.js — لا تعدّله يدوياً، عدّل المصدر ثم أعد البناء.",
+    "generated_from": [
+      "knowledge.json",
+      "services-catalog.csv"
+    ],
+    "count": 138,
+    "with_requirements": 8
+  },
+  "services": [
+    {
+      "id": "business-setup-001",
+      "name": "قيد سجل تجاري لمؤسسة فردية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "السجلات التجارية",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": null,
+      "audience": "أصحاب المنشآت الصغيرة والمتوسطة، والمؤسسات الفردية، والشركات الراغبة في تأسيس أو تعديل أو إنهاء سجلاتها التجارية.",
+      "also_covers": [],
+      "requirements": [
+        "السجل التجاري ساري أو تحت التأسيس",
+        "هوية وطنية لصاحب المؤسسة",
+        "بيانات النشاط والعنوان الوطني"
+      ],
+      "steps": [
+        "نراجع بيانات النشاط والأهلية",
+        "نجهز الطلب في منصة وزارة التجارة",
+        "نتابع الإصدار حتى الاعتماد",
+        "نسلّمك صورة السجل والرقم الموحد"
+      ],
+      "duration": "دقيقتان",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "business-setup-002",
+      "name": "تعديل بيانات السجل التجاري لمؤسسة فردية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "السجلات التجارية",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [
+        "إضافة نشاط إلى السجل التجاري",
+        "تعديل أنشطة السجل التجاري",
+        "تعديل العنوان وبيانات التواصل في السجل التجاري"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-003",
+      "name": "مستخرج سجل تجاري / إفادة تجارية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "السجلات التجارية",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://business.sa/",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-004",
+      "name": "شطب سجل تجاري لمؤسسة فردية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "السجلات التجارية",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=68",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-005",
+      "name": "تأسيس شركة ذات مسؤولية محدودة",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=99",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-006",
+      "name": "تأسيس شركة مساهمة مبسطة",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/ServiceDetails.aspx?sID=94",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-007",
+      "name": "التحول من مؤسسة فردية إلى شركة",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-008",
+      "name": "تعديل عقد التأسيس / النظام الأساسي",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [
+        "إضافة أو انسحاب شريك",
+        "تعديل حصص الشركاء",
+        "تعديل المدير أو صلاحيات الإدارة"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-012",
+      "name": "التأكيد السنوي لبيانات السجل التجاري لشركة",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "هذا إجراء امتثال دوري إلزامي يُقدَّم في موعده السنوي المحدد لتفادي أي إيقاف للسجل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-013",
+      "name": "التحول من نوع شركة إلى نوع آخر",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-014",
+      "name": "حل الشركة وتصفيتها",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "تأسيس وإدارة الشركات",
+      "status": "eligibility_review",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=1",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-015",
+      "name": "حجز اسم تجاري",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الأسماء التجارية",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=1",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-016",
+      "name": "تعديل الاسم التجاري",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الأسماء التجارية",
+      "status": "eligibility_review",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=1",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-017",
+      "name": "التنازل عن الاسم التجاري",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الأسماء التجارية",
+      "status": "eligibility_review",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=1",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة الطرف المتنازَل له واستيفاء شروط النقل النظامية.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-018",
+      "name": "تمديد حجز الاسم التجاري",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الأسماء التجارية",
+      "status": "eligibility_review",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=1",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-021",
+      "name": "التأكيد السنوي لبيانات السجل التجاري لمؤسسة فردية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الأنشطة وبيانات المنشأة",
+      "status": "available",
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "authority_url": "https://mc.gov.sa/ar/eservices/pages/default.aspx",
+      "summary": "هذا إجراء امتثال دوري إلزامي يُقدَّم في موعده السنوي المحدد لتفادي أي إيقاف للسجل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-023",
+      "name": "تصديق خطاب إلكتروني",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": null,
+      "audience": "أصحاب المنشآت الصغيرة والمتوسطة، والمؤسسات الفردية، والشركات الراغبة في تأسيس أو تعديل أو إنهاء سجلاتها التجارية.",
+      "also_covers": [],
+      "requirements": [
+        "نص الخطاب أو المستند المطلوب تصديقه",
+        "هوية مفوض المنشأة",
+        "عضوية سارية في الغرفة التجارية"
+      ],
+      "steps": [
+        "نراجع صيغة الخطاب قبل الرفع",
+        "نرفعه للتصديق الإلكتروني عبر الغرفة",
+        "نتابع الاعتماد",
+        "نسلّمك النسخة المصدقة"
+      ],
+      "duration": "خلال ساعات العمل نفسه",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "business-setup-024",
+      "name": "تصديق تفويض",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": "هذه خدمة تصديق لمستند قائم، وتتطلب أن يكون المستند جاهزًا ومكتملًا قبل رفعه للجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-025",
+      "name": "تصديق معاملات وزارة الخارجية",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": "هذه خدمة تصديق لمستند قائم، وتتطلب أن يكون المستند جاهزًا ومكتملًا قبل رفعه للجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-026",
+      "name": "تصديق معاملات بين المنشآت",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": "هذه خدمة تصديق لمستند قائم، وتتطلب أن يكون المستند جاهزًا ومكتملًا قبل رفعه للجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-027",
+      "name": "تصديق العقود والاتفاقيات بين المنشآت",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": "هذه خدمة تصديق لمستند قائم، وتتطلب أن يكون المستند جاهزًا ومكتملًا قبل رفعه للجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "business-setup-028",
+      "name": "إصدار خطاب تعريف بالمنشأة مصدق",
+      "category": "تأسيس وإدارة الأعمال",
+      "subcategory": "الغرف والتصديقات التجارية",
+      "status": "eligibility_review",
+      "authority": "الغرف التجارية / خدمات المشتركين",
+      "authority_url": "https://chamber.sa/ChamberServices/SubscribersServices/Pages/ClientsServices.aspx",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-001",
+      "name": "نقل خدمات موظف من صاحب عمل آخر",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": null,
+      "audience": "أصحاب المنشآت الذين يديرون موظفين سعوديين أو وافدين، ومكاتب الموارد البشرية الصغيرة التي تحتاج تنفيذًا خارجيًا.",
+      "also_covers": [
+        "قبول وإكمال طلب نقل الخدمات"
+      ],
+      "requirements": [
+        "موافقة صاحب العمل الحالي والجديد",
+        "رقم إقامة العامل ورقم الحدود",
+        "خلو المنشأة من مخالفات تمنع النقل"
+      ],
+      "steps": [
+        "نتحقق من أهلية الطرفين والعامل للنقل",
+        "نرفع طلب النقل عبر منصة قوى",
+        "نتابع الموافقة أو أي ملاحظات",
+        "نبلغك فور اكتمال النقل"
+      ],
+      "duration": "3 إلى 7 أيام عمل",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "hr-002",
+      "name": "نقل خدمات موظف من فرد إلى منشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-004",
+      "name": "نقل خدمات عامل برقم الحدود",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-005",
+      "name": "نقل خدمات سائق خاص إلى منشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-006",
+      "name": "نقل خدمات عامل منزلي إلى منشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-007",
+      "name": "نقل خدمات من صاحب عمل آخر (حرية التنقل)",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "نقل خدمات الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D9%86%D9%82%D9%84-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D9%85%D9%86-%D8%B5%D8%A7%D8%AD%D8%A8-%D8%B9%D9%85%D9%84-%D8%A2%D8%AE%D8%B1-%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%86%D9%82%D9%84",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-009",
+      "name": "إنشاء وتوثيق عقد عمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "عقود العمل وإدارة الموظفين",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [
+        "إدارة وقبول العقود الوظيفية"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-010",
+      "name": "تعديل عقد العمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "عقود العمل وإدارة الموظفين",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-011",
+      "name": "تجديد عقد العمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "عقود العمل وإدارة الموظفين",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-012",
+      "name": "إنهاء العلاقة التعاقدية",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "عقود العمل وإدارة الموظفين",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-014",
+      "name": "إصدار شهادة خبرة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "عقود العمل وإدارة الموظفين",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-015",
+      "name": "تغيير مهنة موظف مقيم",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-016",
+      "name": "إصدار رخصة عمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-017",
+      "name": "تجديد رخصة عمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-018",
+      "name": "إصدار رخصة عمل بغرض الخروج النهائي",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-019",
+      "name": "معالجة قيود المهن المرتبطة بنشاط المنشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-020",
+      "name": "متابعة أهلية المنشأة لإصدار وتجديد رخص العمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "المهن ورخص العمل",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-021",
+      "name": "التأشيرات المهنية الفورية",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "التأشيرات والاستقدام",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D9%81%D9%88%D8%B1%D9%8A%D8%A9",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [
+        "التأشيرات المهنية الفورية — حالة التوسع"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-022",
+      "name": "إلغاء تأشيرة عمل مهنية",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "التأشيرات والاستقدام",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D9%81%D9%88%D8%B1%D9%8A%D8%A9",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-025",
+      "name": "التفويض على تأشيرة عمل",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "التأشيرات والاستقدام",
+      "status": "available",
+      "authority": "منصة التأشيرات / وزارة الخارجية",
+      "authority_url": "https://visa.mofa.gov.sa/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-026",
+      "name": "متابعة رصيد وأهلية المنشأة للتأشيرات",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "التأشيرات والاستقدام",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D9%81%D9%88%D8%B1%D9%8A%D8%A9",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-027",
+      "name": "معالجة تعذر إصدار التأشيرات للمنشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "التأشيرات والاستقدام",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D9%81%D9%88%D8%B1%D9%8A%D8%A9",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-028",
+      "name": "فتح وإدارة ملف المنشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-029",
+      "name": "تحديث بيانات المنشأة العمالية",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-030",
+      "name": "إدارة صلاحيات مستخدمي المنشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-031",
+      "name": "الاستعلام عن نطاق المنشأة",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%86%D8%B7%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D9%86%D8%B4%D8%A3%D8%A9",
+      "summary": "هذه خدمة استعلام أو تحقق لا تُنشئ التزامًا جديدًا، بل تُطلع العميل على حالة قائمة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-032",
+      "name": "احتساب نطاق المنشأة عبر حاسبة نطاقات",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%86%D8%B7%D8%A7%D9%82%D8%A7%D8%AA",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-033",
+      "name": "معالجة ملاحظات النطاق والتوطين",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%86%D8%B7%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D9%86%D8%B4%D8%A3%D8%A9",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-034",
+      "name": "إصدار شهادة حماية الأجور",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "available",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%A3%D8%B5%D8%AF%D8%A7%D8%B1-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "hr-035",
+      "name": "معالجة إيقاف أو تعثر خدمات المنشأة العمالية",
+      "category": "الموارد البشرية والموظفون",
+      "subcategory": "خدمات المنشأة والامتثال العمالي",
+      "status": "eligibility_review",
+      "authority": "قوى / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/businessmen",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-001",
+      "name": "إصدار هوية مقيم",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الإقامات وهوية مقيم",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [
+        "طباعة هوية مقيم"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-002",
+      "name": "تجديد هوية مقيم",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الإقامات وهوية مقيم",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": null,
+      "audience": "المنشآت الكفيلة والأفراد المقيمون الراغبون في إصدار أو تجديد أو تحديث معاملات الإقامة والجوازات.",
+      "also_covers": [],
+      "requirements": [
+        "إقامة سارية أو منتهية حديثًا",
+        "جواز سفر ساري",
+        "سداد الرسوم النظامية إن استحقت"
+      ],
+      "steps": [
+        "نتحقق من أهلية المقيم للتجديد",
+        "ننفذ التجديد عبر القناة الرسمية",
+        "نتابع صدور الهوية",
+        "نبلغك فور الإنجاز"
+      ],
+      "duration": "يوم إلى 3 أيام عمل",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "residency-006",
+      "name": "إصدار بدل فاقد أو تالف لهوية مقيم",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الإقامات وهوية مقيم",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-007",
+      "name": "معالجة تعذر إصدار أو تجديد الإقامة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الإقامات وهوية مقيم",
+      "status": "eligibility_review",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-008",
+      "name": "إصدار تأشيرة خروج وعودة — مفردة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج والعودة",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-009",
+      "name": "إصدار تأشيرة خروج وعودة — متعددة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج والعودة",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [
+        "تمديد تأشيرة خروج وعودة"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-011",
+      "name": "تمديد تأشيرة خروج وعودة لمن هم خارج المملكة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج والعودة",
+      "status": "eligibility_review",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-012",
+      "name": "إلغاء تأشيرة خروج وعودة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج والعودة",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-013",
+      "name": "معالجة ومتابعة تأشيرة الخروج والعودة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج والعودة",
+      "status": "eligibility_review",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-014",
+      "name": "إصدار تأشيرة خروج نهائي",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج النهائي",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [
+        "متابعة ومعالجة متطلبات الخروج النهائي"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-015",
+      "name": "إلغاء تأشيرة خروج نهائي",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج النهائي",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-016",
+      "name": "معالجة تعذر إصدار الخروج النهائي",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الخروج النهائي",
+      "status": "eligibility_review",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-018",
+      "name": "تحديث معلومات جواز سفر للمقيمين",
+      "category": "الإقامات والجوازات",
+      "subcategory": "بيانات المقيمين والجوازات",
+      "status": "available",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [
+        "تسجيل جواز سفر جديد للمقيم"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-021",
+      "name": "معالجة اختلاف أو تعثر بيانات المقيم والجواز",
+      "category": "الإقامات والجوازات",
+      "subcategory": "بيانات المقيمين والجوازات",
+      "status": "eligibility_review",
+      "authority": "أبشر أعمال / مقيم / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-022",
+      "name": "تمديد تأشيرة الزيارة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الزيارات وخدمات الزائرين",
+      "status": "available",
+      "authority": "أبشر / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/Visa%2BFAQS/FAQs_AR",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [
+        "تمديد تأشيرة الزيارة — مفردة",
+        "تمديد تأشيرة الزيارة — متعددة"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "residency-025",
+      "name": "متابعة ومعالجة تعذر تمديد الزيارة",
+      "category": "الإقامات والجوازات",
+      "subcategory": "الزيارات وخدمات الزائرين",
+      "status": "eligibility_review",
+      "authority": "أبشر / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/Visa%2BFAQS/FAQs_AR",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-001",
+      "name": "تسجيل مشترك سعودي لدى المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "التأمينات وتسجيل المشتركين",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-002",
+      "name": "تسجيل مشترك غير سعودي لدى المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "التأمينات وتسجيل المشتركين",
+      "status": "eligibility_review",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-003",
+      "name": "استبعاد مشترك من المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "التأمينات وتسجيل المشتركين",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-004",
+      "name": "تعديل بيانات المشترك",
+      "category": "الأجور والتأمينات",
+      "subcategory": "التأمينات وتسجيل المشتركين",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [
+        "تعديل تاريخ الالتحاق أو الاستبعاد"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-006",
+      "name": "تعديل أجر المشترك",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الأجور والاشتراكات",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-007",
+      "name": "تحديث الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الأجور والاشتراكات",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-008",
+      "name": "متابعة اشتراكات المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الأجور والاشتراكات",
+      "status": "eligibility_review",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-009",
+      "name": "معالجة اختلافات الأجور والاشتراكات",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الأجور والاشتراكات",
+      "status": "eligibility_review",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-010",
+      "name": "إعداد ملف حماية الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "حماية الأجور ومُدد",
+      "status": "eligibility_review",
+      "authority": "مُدد / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%B1%D9%81%D8%B9-%D9%85%D9%84%D9%81-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-011",
+      "name": "رفع ملف حماية الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "حماية الأجور ومُدد",
+      "status": "available",
+      "authority": "مُدد / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%B1%D9%81%D8%B9-%D9%85%D9%84%D9%81-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": null,
+      "audience": "المنشآت المسجلة في التأمينات الاجتماعية وأصحاب العمل الراغبون في ضبط أجور ومدد موظفيهم.",
+      "also_covers": [],
+      "requirements": [
+        "ملف أجور شهري مطابق لبيانات التأمينات",
+        "حساب بنكي معتمد ضمن برنامج مُدد",
+        "بيانات الموظفين المسجلين لدى المنشأة"
+      ],
+      "steps": [
+        "نراجع ملف الأجور قبل الرفع",
+        "نرفع الملف عبر مُدد",
+        "نتابع نسبة الالتزام والملاحظات",
+        "نرسل لك تأكيد الرفع ونسبة الامتثال"
+      ],
+      "duration": "يوم عمل واحد",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "wages-insurance-012",
+      "name": "معالجة رفض وملاحظات ملف حماية الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "حماية الأجور ومُدد",
+      "status": "eligibility_review",
+      "authority": "مُدد / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%B1%D9%81%D8%B9-%D9%85%D9%84%D9%81-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-013",
+      "name": "متابعة نسبة الالتزام ببرنامج حماية الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "حماية الأجور ومُدد",
+      "status": "eligibility_review",
+      "authority": "مُدد / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%B1%D9%81%D8%B9-%D9%85%D9%84%D9%81-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-014",
+      "name": "معالجة اختلاف أو عدم ظهور بيانات الموظفين والأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "حماية الأجور ومُدد",
+      "status": "eligibility_review",
+      "authority": "مُدد / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.hrsd.gov.sa/ministry-services/services/%D8%B1%D9%81%D8%B9-%D9%85%D9%84%D9%81-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AC%D9%88%D8%B1",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-015",
+      "name": "إصدار شهادة المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الشهادات والامتثال التأميني",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-016",
+      "name": "إصدار شهادة الأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الشهادات والامتثال التأميني",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-017",
+      "name": "إصدار شهادة الاشتراك والأجور",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الشهادات والامتثال التأميني",
+      "status": "available",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "wages-insurance-018",
+      "name": "متابعة ومعالجة حالة التزام المنشأة",
+      "category": "الأجور والتأمينات",
+      "subcategory": "الشهادات والامتثال التأميني",
+      "status": "eligibility_review",
+      "authority": "التأمينات الاجتماعية (GOSI)",
+      "authority_url": "https://www.gosi.gov.sa/ar",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "licenses-001",
+      "name": "إصدار رخصة تجارية",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "available",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": null,
+      "audience": "المنشآت التي تحتاج ترخيصًا بلديًا أو قطاعيًا لمزاولة نشاطها، وأصحاب الأعمال الجدد قبل افتتاح النشاط.",
+      "also_covers": [],
+      "requirements": [
+        "السجل التجاري ونشاطه",
+        "عقد إيجار أو صك ملكية الموقع",
+        "استيفاء اشتراطات النشاط البلدية"
+      ],
+      "steps": [
+        "نراجع اشتراطات البلدية للنشاط والموقع",
+        "نجهز الطلب ونرفع المستندات",
+        "نتابع الاعتماد والملاحظات",
+        "نسلّمك الرخصة سارية"
+      ],
+      "duration": "يحدَّد بعد مراجعة النشاط والمدينة",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "licenses-002",
+      "name": "تجديد رخصة تجارية",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "available",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "licenses-003",
+      "name": "تعديل رخصة نشاط تجاري",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "available",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "licenses-004",
+      "name": "إلغاء رخصة نشاط تجاري",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "available",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "licenses-005",
+      "name": "نقل ملكية رخصة تجارية",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "available",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "licenses-006",
+      "name": "معالجة تعذر إصدار أو تجديد الرخصة",
+      "category": "التراخيص والامتثال",
+      "subcategory": "الرخص البلدية",
+      "status": "eligibility_review",
+      "authority": "بلدي / وزارة البلديات والإسكان",
+      "authority_url": "https://www.balady.gov.sa/ar/products/10920",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-001",
+      "name": "التسجيل في ضريبة القيمة المضافة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "التسجيل والبيانات الضريبية",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-002",
+      "name": "إلغاء التسجيل في ضريبة القيمة المضافة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "التسجيل والبيانات الضريبية",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-003",
+      "name": "تحديث بيانات المكلف",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "التسجيل والبيانات الضريبية",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-004",
+      "name": "تعديل بيانات التسجيل الضريبي",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "التسجيل والبيانات الضريبية",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-005",
+      "name": "معالجة مشكلات التسجيل والربط لدى الهيئة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "التسجيل والبيانات الضريبية",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-006",
+      "name": "تقديم إقرار ضريبة القيمة المضافة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الإقرارات والمستحقات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eservices-009.aspx",
+      "summary": null,
+      "audience": "المنشآت المسجلة أو المطلوب تسجيلها لدى هيئة الزكاة والضريبة والجمارك.",
+      "also_covers": [],
+      "requirements": [
+        "بيانات المبيعات والمشتريات للفترة",
+        "فواتير ضريبية متوافقة",
+        "تفويض لتقديم الإقرار نيابة عن المنشأة",
+        "ملاحظة: الإعداد المحاسبي المتخصص يتطلب ترخيصًا مناسبًا"
+      ],
+      "steps": [
+        "نستلم بيانات الفترة الضريبية من العميل",
+        "ننفذ تقديم الإقرار إلكترونيًا وفق تفويضه",
+        "نتابع حالة الإقرار لدى الهيئة",
+        "نرسل لك إشعار التقديم"
+      ],
+      "duration": "يحدَّد حسب الفترة الضريبية",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "tax-zakat-007",
+      "name": "تعديل الإقرار الضريبي وفق بيانات العميل",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الإقرارات والمستحقات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eservices-009.aspx",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-008",
+      "name": "متابعة حالة الإقرار والمستحقات",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الإقرارات والمستحقات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eservices-009.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-009",
+      "name": "متابعة الفواتير والمدفوعات الضريبية",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الإقرارات والمستحقات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eservices-009.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-010",
+      "name": "تقديم الإقرار الزكوي",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الزكاة والشهادات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-011",
+      "name": "متابعة الاستحقاقات الزكوية",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الزكاة والشهادات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-012",
+      "name": "إصدار ومتابعة شهادة الزكاة والضريبة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الزكاة والشهادات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-013",
+      "name": "معالجة ملاحظات إصدار الشهادة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الزكاة والشهادات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-014",
+      "name": "تقديم طلب استرداد ضريبة القيمة المضافة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الاسترداد والطلبات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eServices-015.aspx",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-015",
+      "name": "متابعة ومعالجة طلب الاسترداد",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الاسترداد والطلبات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/eServices-015.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-016",
+      "name": "تقديم ومتابعة طلب تقسيط المستحقات",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الاسترداد والطلبات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "tax-zakat-017",
+      "name": "متابعة الطلبات والملاحظات لدى الهيئة",
+      "category": "الزكاة والضريبة والمالية",
+      "subcategory": "الاسترداد والطلبات",
+      "status": "eligibility_review",
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "authority_url": "https://zatca.gov.sa/ar/eServices/Pages/default.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-001",
+      "name": "إصدار وكالة فردية",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "الوكالات والتوثيق",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-002",
+      "name": "فسخ وكالة",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "الوكالات والتوثيق",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "يترتب على هذه الخدمة إنهاء التزام أو كيان قائم، فيُنصح بمراجعة الأثر النظامي قبل التنفيذ.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-003",
+      "name": "التحقق من وكالة",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "الوكالات والتوثيق",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://najiz.sa/applications/wekalat/procuration-verification",
+      "summary": "هذه خدمة استعلام أو تحقق لا تُنشئ التزامًا جديدًا، بل تُطلع العميل على حالة قائمة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-004",
+      "name": "تسجيل وكالة",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "الوكالات والتوثيق",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-005",
+      "name": "متابعة ومعالجة خدمات الوكالات والتوثيق",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "الوكالات والتوثيق",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-006",
+      "name": "الاستعلام عن القضايا والطلبات",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "خدمات ناجز العدلية",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة استعلام أو تحقق لا تُنشئ التزامًا جديدًا، بل تُطلع العميل على حالة قائمة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-007",
+      "name": "متابعة الطلبات القضائية إلكترونيًا",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "خدمات ناجز العدلية",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-008",
+      "name": "تقديم طلب تنفيذ",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "خدمات ناجز العدلية",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-009",
+      "name": "الاستعلام عن طلب تنفيذ",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "خدمات ناجز العدلية",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة استعلام أو تحقق لا تُنشئ التزامًا جديدًا، بل تُطلع العميل على حالة قائمة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "notarization-010",
+      "name": "حجز ومتابعة المواعيد العدلية",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "خدمات ناجز العدلية",
+      "status": "eligibility_review",
+      "authority": "ناجز / وزارة العدل",
+      "authority_url": "https://www.najiz.sa/",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "employee-health-insurance",
+      "name": "إصدار تأمين صحي للموظفين",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "التأمين الصحي للمنشآت والموظفين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": null,
+      "audience": "المنشآت والأفراد المحتاجون لتوثيق وكالات أو معاملات عدلية، أو ربط تأمين صحي للموظفين.",
+      "also_covers": [],
+      "requirements": [
+        "قائمة الموظفين المطلوب تأمينهم",
+        "بيانات المنشأة والسجل التجاري",
+        "اختيار الباقة التأمينية المناسبة"
+      ],
+      "steps": [
+        "نرشح لك شركة أو وسيطًا مرخصًا",
+        "نجهز طلب الإصدار مع مقدم الخدمة",
+        "نتابع الإصدار وربط التأمين",
+        "نسلّمك الوثيقة النهائية"
+      ],
+      "duration": "يحدَّد حسب شركة التأمين",
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "office_unverified"
+      }
+    },
+    {
+      "id": "renew-health-insurance",
+      "name": "تجديد التأمين الصحي",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "التأمين الصحي للمنشآت والموظفين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "update-health-insurance-policy-employees",
+      "name": "إضافة أو حذف موظف من وثيقة التأمين",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "التأمين الصحي للمنشآت والموظفين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": "تُطبَّق هذه الخدمة على إضافة أو حذف بيانات ضمن سجل قائم لدى الجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "health-insurance-linking",
+      "name": "متابعة ربط التأمين الصحي",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "التأمين الصحي للمنشآت والموظفين",
+      "status": "eligibility_review",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.chi.gov.sa/servicesdirectory/pages/checkinsurance.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "fix-health-insurance-linking",
+      "name": "معالجة عدم ظهور أو تعثر ربط التأمين",
+      "category": "التوثيق والخدمات المساندة",
+      "subcategory": "التأمين الصحي للمنشآت والموظفين",
+      "status": "eligibility_review",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.chi.gov.sa/servicesdirectory/pages/checkinsurance.aspx",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-001",
+      "name": "حجز المواعيد عبر أبشر",
+      "category": "خدمات الأفراد",
+      "subcategory": "أبشر والخدمات الشخصية",
+      "status": "eligibility_review",
+      "authority": "أبشر",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-006",
+      "name": "إضافة تابع مقيم",
+      "category": "خدمات الأفراد",
+      "subcategory": "التابعون والمرافقون",
+      "status": "eligibility_review",
+      "authority": "أبشر / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "تُطبَّق هذه الخدمة على إضافة أو حذف بيانات ضمن سجل قائم لدى الجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-008",
+      "name": "تحديث معلومات جواز التابع",
+      "category": "خدمات الأفراد",
+      "subcategory": "التابعون والمرافقون",
+      "status": "eligibility_review",
+      "authority": "أبشر / المديرية العامة للجوازات",
+      "authority_url": "https://www.absher.sa/wps/wcm/connect/individuals/contents/individuals%2BAR/eServices%2BUser%2BGuide/eServices/Passport-Services/",
+      "summary": "تُطبَّق هذه الخدمة على بيانات أو كيان قائم فعليًا، وتتطلب مطابقة البيانات الجديدة مع سجلات الجهة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-011",
+      "name": "طلب زيارة عائلية",
+      "category": "خدمات الأفراد",
+      "subcategory": "الزيارات الشخصية",
+      "status": "available",
+      "authority": "منصة التأشيرات / وزارة الخارجية",
+      "authority_url": "https://visa.mofa.gov.sa/",
+      "summary": "تخضع هذه الخدمة للإجراء النظامي المعتمد لدى الجهة المختصة، وقد تختلف تفاصيلها بحسب حالة العميل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-012",
+      "name": "الاستعلام عن طلب زيارة",
+      "category": "خدمات الأفراد",
+      "subcategory": "الزيارات الشخصية",
+      "status": "available",
+      "authority": "منصة التأشيرات / وزارة الخارجية",
+      "authority_url": "https://visa.mofa.gov.sa/",
+      "summary": "هذه خدمة استعلام أو تحقق لا تُنشئ التزامًا جديدًا، بل تُطلع العميل على حالة قائمة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-013",
+      "name": "معالجة ملاحظات طلب الزيارة",
+      "category": "خدمات الأفراد",
+      "subcategory": "الزيارات الشخصية",
+      "status": "eligibility_review",
+      "authority": "منصة التأشيرات / وزارة الخارجية",
+      "authority_url": "https://visa.mofa.gov.sa/",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-014",
+      "name": "تصديق طلب زيارة",
+      "category": "خدمات الأفراد",
+      "subcategory": "الزيارات الشخصية",
+      "status": "available",
+      "authority": "منصة التأشيرات / وزارة الخارجية",
+      "authority_url": "https://visa.mofa.gov.sa/",
+      "summary": "هذه خدمة تصديق لمستند قائم، وتتطلب أن يكون المستند جاهزًا ومكتملًا قبل رفعه للجهة المختصة.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-015",
+      "name": "إصدار تأشيرة عمالة منزلية",
+      "category": "خدمات الأفراد",
+      "subcategory": "العمالة المنزلية",
+      "status": "eligibility_review",
+      "authority": "مساند / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.musaned.com.sa/ar/faqs/issuing-visa",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-016",
+      "name": "نقل خدمات العمالة المنزلية بين الأفراد",
+      "category": "خدمات الأفراد",
+      "subcategory": "العمالة المنزلية",
+      "status": "eligibility_review",
+      "authority": "مساند / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.musaned.com.sa/ar/faqs/issuing-visa",
+      "summary": "يعتمد قبول هذه الخدمة على موافقة جميع الأطراف وأهليتهم النظامية وقت التقديم، ولا نضمن القبول مسبقًا.",
+      "audience": null,
+      "also_covers": [
+        "نقل خدمات عامل منزلي (مهنة سائق خاص) بين الأفراد"
+      ],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-018",
+      "name": "متابعة طلب نقل العمالة المنزلية",
+      "category": "خدمات الأفراد",
+      "subcategory": "العمالة المنزلية",
+      "status": "eligibility_review",
+      "authority": "مساند / وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_url": "https://www.musaned.com.sa/ar/faqs/issuing-visa",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-021",
+      "name": "إصدار تأمين طبي للمقيم",
+      "category": "خدمات الأفراد",
+      "subcategory": "التأمين الطبي للأفراد والتابعين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-022",
+      "name": "إصدار تأمين طبي للتابعين",
+      "category": "خدمات الأفراد",
+      "subcategory": "التأمين الطبي للأفراد والتابعين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": "هذه خدمة إصدار أو تسجيل جديد، وتخضع لمراجعة الأهلية قبل البدء.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-023",
+      "name": "تجديد التأمين الطبي",
+      "category": "خدمات الأفراد",
+      "subcategory": "التأمين الطبي للأفراد والتابعين",
+      "status": "via_partner",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.ia.gov.sa/ar/home",
+      "summary": "يُفضَّل تقديم الطلب قبل تاريخ الانتهاء بوقت كافٍ لتفادي أي غرامات أو تعطل.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-024",
+      "name": "متابعة ربط التأمين الطبي",
+      "category": "خدمات الأفراد",
+      "subcategory": "التأمين الطبي للأفراد والتابعين",
+      "status": "eligibility_review",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.chi.gov.sa/servicesdirectory/pages/checkinsurance.aspx",
+      "summary": "هذه خدمة متابعة لحالة أو طلب قائم لدى الجهة المختصة، وليست إصدارًا جديدًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    },
+    {
+      "id": "individuals-025",
+      "name": "معالجة عدم ظهور أو تعثر ربط التأمين",
+      "category": "خدمات الأفراد",
+      "subcategory": "التأمين الطبي للأفراد والتابعين",
+      "status": "eligibility_review",
+      "authority": "شركة تأمين أو وسيط مرخص / هيئة التأمين / مجلس الضمان الصحي",
+      "authority_url": "https://www.chi.gov.sa/servicesdirectory/pages/checkinsurance.aspx",
+      "summary": "هذه خدمة معالجة لحالة متعثرة تحديدًا، وتُنفَّذ بعد تشخيص سبب التعثر أولًا.",
+      "audience": null,
+      "also_covers": [],
+      "requirements": [],
+      "steps": [],
+      "duration": null,
+      "pricing": {
+        "method": "يحدد بعد المراجعة",
+        "office_fee": null,
+        "approval": "needs_approval"
+      },
+      "provenance": {
+        "source": "كتالوج خدمات المكتب (knowledge.json + services-catalog.csv)",
+        "source_kind": "office_catalog",
+        "checked_at": "2026-10-20",
+        "listing_approval": "approved",
+        "requirements_approval": "missing"
+      }
+    }
+  ]
+}

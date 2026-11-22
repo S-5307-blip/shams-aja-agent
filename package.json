@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "مساعد شمس أجا الذكي: وكيل واتساب (المرحلة الأولى: اقتراح الردود بموافقة المالك)",
+  "description": "مساعد شمس أجا الذكي: وكيل واتساب + وكيل عمليات المكتب (العملاء والمعاملات والمستندات والتجديدات)",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node --env-file=.env src/server.js"
+    "dev": "node --env-file=.env src/server.js",
+    "ops": "node src/ops/server.js",
+    "ops:dev": "node --env-file-if-exists=.env src/ops/server.js",
+    "ops:migrate": "node --env-file-if-exists=.env src/ops/migrate.js",
+    "ops:seed": "node --env-file-if-exists=.env scripts/seed-demo.js",
+    "ops:followups": "node --env-file-if-exists=.env src/ops/followups-cli.js",
+    "kb:build": "node scripts/build-kb.js",
+    "test": "node --test \"test/*.test.js\""
   },
-  "engines": { "node": ">=20.6" },
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
-    "@anthropic-ai/sdk": "latest",
+    "@anthropic-ai/sdk": "^0.136.0",
     "better-sqlite3": "^11.5.0",
     "express": "^4.21.0"
   }

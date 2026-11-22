@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "description": "سياسات المكتب. office = سياسات وردت في قواعد وكيل واتساب المعتمدة (knowledge.json). operations = سياسات تشغيلية مقترحة لوكيل العمليات تحتاج اعتماد المالك."
+  },
+  "policies": [
+    {
+      "id": "policy-office-01",
+      "scope": "office",
+      "text": "أتعاب المكتب منفصلة عن الرسوم الحكومية، والرسوم الحكومية تُدفع كما هي وتخضع للرسوم النافذة لدى الجهة المختصة وقت التنفيذ.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-office-02",
+      "scope": "office",
+      "text": "عرض السعر يصل قبل بدء التنفيذ، ويبدأ التنفيذ بعد قبول العرض والدفع.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-office-03",
+      "scope": "office",
+      "text": "وسيلة الدفع الحالية: تحويل بنكي بعد قبول عرض السعر، ويبدأ التنفيذ بعد تأكيد المكتب استلام التحويل.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-office-04",
+      "scope": "office",
+      "text": "لا نطلب من العميل كلمة المرور ولا رمز التحقق ولا بيانات البطاقة البنكية عبر الدردشة.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-office-05",
+      "scope": "office",
+      "text": "المستندات تُرفع عبر بوابة الموقع الآمنة (من حساب العميل)، لا عبر واتساب.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-office-06",
+      "scope": "office",
+      "text": "لا نمنح خصومات عبر المساعد الآلي، والاستثناءات يقررها المالك.",
+      "source": {
+        "name": "قواعد وكيل واتساب المعتمدة (knowledge.json)",
+        "kind": "office"
+      },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "policy-ops-01",
+      "scope": "operations",
+      "text": "لا يغيّر الوكيل حالة معاملة إلا عبر إجراء ينتظر اعتماد مدير أو مالك، ولا يُعلن التغيير قبل نجاح التنفيذ.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "policy-ops-02",
+      "scope": "operations",
+      "text": "لا يُرسل أي تذكير أو رسالة لعميل إلا بعد اعتماد مدير أو مالك، وبقالب معتمد من Meta عند الإرسال خارج نافذة ٢٤ ساعة.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "policy-ops-03",
+      "scope": "operations",
+      "text": "العميل الذي طلب إيقاف الرسائل لا تُجهَّز له تذكيرات، وتُنشأ مهمة داخلية فقط.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "policy-ops-04",
+      "scope": "operations",
+      "text": "تواريخ الانتهاء تُقرأ من مصدرها الرسمي (أبشر/مقيم/قوى/منصة الأعمال) أو من المستند، ويُسجَّل مصدرها وتاريخ التحقق. عند تعارض تاريخين يُطلب التحقق ولا يُرجَّح أحدهما.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "policy-ops-05",
+      "scope": "operations",
+      "text": "لا يُحفظ من أرقام الهويات والإقامات إلا آخر ٤ أرقام.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "policy-ops-06",
+      "scope": "operations",
+      "text": "الأسعار وأتعاب المكتب لا يذكرها الوكيل حتى يعتمدها المالك، ويُفصل دائماً بين الأتعاب والرسوم الحكومية.",
+      "source": {
+        "name": "مقترح تشغيلي للنسخة الأولى",
+        "kind": "proposal"
+      },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    }
+  ]
+}

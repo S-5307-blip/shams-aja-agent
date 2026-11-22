@@ -1,0 +1,47 @@
+{
+  "name": "شمس أجا — المتابعة اليومية للتجديدات",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [{ "field": "cronExpression", "expression": "17 7 * * *" }] }
+      },
+      "name": "كل يوم 7:17 صباحاً",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.OPS_BASE_URL }}/api/automation/followups",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": { "timeout": 60000, "retry": { "maxTries": 3, "waitBetweenTries": 5000 } }
+      },
+      "name": "تشغيل المتابعة",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [260, 0],
+      "credentials": { "httpHeaderAuth": { "name": "Shams Aja Ops (automation token)" } }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            { "leftValue": "={{ $json.reminders_created + $json.errors.length }}", "rightValue": 0, "operator": { "type": "number", "operation": "gt" } }
+          ]
+        }
+      },
+      "name": "يوجد جديد أو أخطاء؟",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [520, 0]
+    }
+  ],
+  "connections": {
+    "كل يوم 7:17 صباحاً": { "main": [[{ "node": "تشغيل المتابعة", "type": "main", "index": 0 }]] },
+    "تشغيل المتابعة": { "main": [[{ "node": "يوجد جديد أو أخطاء؟", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "timezone": "Asia/Riyadh" },
+  "_notes": "استورد الملف في n8n. اضبط OPS_BASE_URL في متغيرات n8n، وأنشئ اعتماد Header Auth باسم Authorization وقيمته Bearer <رمز مستخدم بدور automation>. اربط فرع «true» بقناة إشعار المدير المتاحة لديك (بريد/واتساب/Slack). الخادم لا يرسل شيئاً للعملاء من هذا التشغيل؛ يجهز تذكيرات تنتظر الاعتماد ومهاماً داخلية فقط."
+}

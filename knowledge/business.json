@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "description": "بيانات المكتب العامة وساعات العمل (من knowledge.json)."
+  },
+  "business": {
+    "name": "شمس أجا للخدمات العامة",
+    "type": "مكتب خدمات عامة وتعقيب معاملات (ولسنا جهة حكومية)",
+    "city": "حائل",
+    "commercialRegistration": "7052215527",
+    "website": "https://www.shmsaja.sa",
+    "portalUrl": "https://www.shmsaja.sa"
+  },
+  "hours": {
+    "open": "16:00",
+    "close": "23:00",
+    "closedDays": [],
+    "label": "من ٤ مساءً إلى ١١ مساءً"
+  },
+  "approval": "approved",
+  "checked_at": "2026-10-20"
+}

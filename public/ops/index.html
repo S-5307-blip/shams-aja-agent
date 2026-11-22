@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>وكيل عمليات شمس أجا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">وكيل عمليات المكتب <small id="tenant"></small></div>
+    <div id="session">
+      <form id="login" class="row">
+        <input id="token" type="password" placeholder="رمز الدخول" autocomplete="off" required>
+        <button>دخول</button>
+      </form>
+      <div id="who" hidden><span id="whoText"></span> <button id="logout" class="link">خروج</button></div>
+    </div>
+  </header>
+
+  <nav id="tabs" hidden>
+    <button data-tab="ask" class="active">اسأل الوكيل</button>
+    <button data-tab="approvals">الاعتمادات <span id="badgeApprovals" class="count"></span></button>
+    <button data-tab="tasks">المهام <span id="badgeTasks" class="count"></span></button>
+    <button data-tab="reminders">التذكيرات</button>
+    <button data-tab="expiring">الانتهاءات</button>
+    <button data-tab="clients">العملاء</button>
+    <button data-tab="audit">سجل التنفيذ</button>
+  </nav>
+
+  <main>
+    <div id="flash" role="status" hidden></div>
+
+    <section id="tab-ask" class="tab">
+      <form id="askForm">
+        <textarea id="request" rows="3" placeholder="مثال: ما نواقص معاملة تجديد إقامة فهد؟ جهّز له تذكيراً بالنواقص." required></textarea>
+        <div class="row">
+          <button id="askBtn">إرسال الطلب</button>
+          <button type="button" id="retryBtn" class="secondary" hidden>إعادة المحاولة (نفس الطلب)</button>
+          <span class="hint">لا يُرسل أي شيء للعميل ولا تتغير أي حالة دون اعتماد مدير.</span>
+        </div>
+      </form>
+      <div id="result"></div>
+    </section>
+
+    <section id="tab-approvals" class="tab" hidden>
+      <h2>إجراءات تنتظر الاعتماد</h2><div id="approvals"></div>
+      <h3>آخر الإجراءات</h3><div id="actionsAll"></div>
+    </section>
+    <section id="tab-tasks" class="tab" hidden>
+      <div class="row"><h2>المهام المفتوحة</h2><button id="runFollowups" class="secondary" hidden>تشغيل المتابعة الآلية الآن</button></div>
+      <div id="followupResult"></div><div id="tasks"></div>
+    </section>
+    <section id="tab-reminders" class="tab" hidden><h2>التذكيرات</h2><div id="reminders"></div></section>
+    <section id="tab-expiring" class="tab" hidden>
+      <div class="row"><h2>المستندات القريبة من الانتهاء</h2>
+        <select id="days"><option>30</option><option selected>60</option><option>90</option><option>180</option></select></div>
+      <div id="expiring"></div>
+    </section>
+    <section id="tab-clients" class="tab" hidden>
+      <form id="clientSearch" class="row"><input id="clientQ" placeholder="اسم، سجل تجاري، آخر ٤ أرقام"><button>بحث</button></form>
+      <div id="clients"></div><div id="clientDetail"></div>
+    </section>
+    <section id="tab-audit" class="tab" hidden><h2>سجل التنفيذ</h2><div id="audit"></div></section>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

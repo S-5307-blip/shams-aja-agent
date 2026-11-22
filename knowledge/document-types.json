@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "description": "أنواع المستندات التي يتابع المكتب انتهاءها، وقواعد التذكير بها. reminder_offsets_days = عدد الأيام قبل تاريخ الانتهاء التي يُجهَّز فيها تذكير (0 = يوم الانتهاء). task_offset_days = متى تُنشأ مهمة داخلية للموظف.",
+    "offsets_approval": "needs_approval",
+    "offsets_note": "مواعيد التذكير اقتراح تشغيلي للنسخة الأولى (سياسة مكتب)، وليست نصاً نظامياً. تحتاج اعتماد المالك.",
+    "approval_values": "approved = معتمد | needs_approval = يحتاج اعتماد المالك | unverified = من مصدر غير رسمي، لا يُستخدم كحقيقة | needs_verification = من مصدر رسمي تعذر فتح صفحته وقت التحقق"
+  },
+  "types": {
+    "iqama": {
+      "name": "هوية مقيم (إقامة)",
+      "renewal_service_id": "residency-002",
+      "reminder_offsets_days": [60, 30, 14, 7, 3, 0],
+      "task_offset_days": 30,
+      "authority": "المديرية العامة للجوازات (أبشر / مقيم)",
+      "facts": [
+        {
+          "text": "تُفرض غرامة على التأخر في تجديد هوية مقيم بعد انتهائها: ٥٠٠ ريال أول مرة، و١٠٠٠ ريال في المرة الثانية، والإبعاد في الثالثة.",
+          "source": { "name": "تقارير صحفية (عاجل، عكاظ) تنقل عن الجوازات", "url": "https://www.okaz.com.sa/news/local/2010842", "kind": "press" },
+          "checked_at": "2026-11-22",
+          "approval": "unverified",
+          "note": "لم يُعثر على الصفحة الرسمية للجوازات في البحث. لا يذكرها الوكيل للعميل كحقيقة حتى تُطابق مع أبشر أو موقع الجوازات."
+        }
+      ]
+    },
+    "work_permit": {
+      "name": "رخصة عمل",
+      "renewal_service_id": "hr-017",
+      "reminder_offsets_days": [90, 60, 30, 14, 7, 0],
+      "task_offset_days": 60,
+      "authority": "وزارة الموارد البشرية والتنمية الاجتماعية (قوى)",
+      "facts": [
+        {
+          "text": "يسمح للمنشأة بتجديد رخصة العمل في حال تبقي ١٨٠ يوماً أو أقل على انتهاء صلاحيتها.",
+          "source": { "name": "وزارة الموارد البشرية — خدمة إصدار وتجديد رخص العمل", "url": "https://www.hrsd.gov.sa/ar/ministry-services/services/70093", "kind": "official" },
+          "checked_at": "2026-11-22",
+          "approval": "approved"
+        },
+        {
+          "text": "لا يمكن إصدار أو تجديد الرخص إن كانت المنشأة في النطاق الأحمر، ويشترط ألا يتجاوز تاريخ انتهاء الرخصة ٦ أشهر.",
+          "source": { "name": "وزارة الموارد البشرية — خدمة إصدار وتجديد رخص العمل", "url": "https://www.hrsd.gov.sa/ar/ministry-services/services/70093", "kind": "official" },
+          "checked_at": "2026-11-22",
+          "approval": "approved"
+        }
+      ]
+    },
+    "cr_annual_confirmation": {
+      "name": "التأكيد السنوي لبيانات السجل التجاري",
+      "renewal_service_id": "business-setup-021",
+      "related_service_ids": ["business-setup-012"],
+      "date_meaning": "تاريخ استحقاق التأكيد السنوي (وليس تاريخ انتهاء)",
+      "reminder_offsets_days": [30, 14, 7, 0],
+      "task_offset_days": 30,
+      "authority": "وزارة التجارة / المركز السعودي للأعمال",
+      "facts": [
+        {
+          "text": "ألغى نظام السجل التجاري الجديد تاريخ انتهاء السجل، واستُعيض عنه بتأكيد سنوي إلكتروني لبيانات السجل بعد مرور عام من تاريخ القيد.",
+          "source": { "name": "وزارة التجارة — المركز الإعلامي والأسئلة الشائعة", "url": "https://mc.gov.sa/ar/FAQ/pages/default.aspx?sid=400", "kind": "official" },
+          "checked_at": "2026-11-22",
+          "approval": "needs_verification",
+          "note": "النص مأخوذ من نتائج بحث تشير لصفحات mc.gov.sa، وأعاد الموقع خطأ 503 عند فتحها للتحقق."
+        },
+        {
+          "text": "عند عدم التأكيد خلال ٩٠ يوماً من موعده يُعلَّق السجل، وإن لم يُؤكَّد خلال سنة من التعليق يُشطب.",
+          "source": { "name": "وزارة التجارة (عبر نتائج البحث) وصحيفة الاقتصادية", "url": "https://mc.gov.sa/ar/mediacenter/News/Pages/22-05-25-03.aspx", "kind": "official" },
+          "checked_at": "2026-11-22",
+          "approval": "needs_verification",
+          "note": "اختلفت الصياغة بين المصادر (٩٠ يوماً / ٣ أشهر). يُراجع النص الرسمي للائحة."
+        }
+      ]
+    },
+    "commercial_license": {
+      "name": "رخصة تجارية (بلدية)",
+      "renewal_service_id": "licenses-002",
+      "reminder_offsets_days": [60, 30, 14, 7, 0],
+      "task_offset_days": 30,
+      "authority": "وزارة البلديات والإسكان (بلدي)",
+      "facts": []
+    },
+    "health_insurance": {
+      "name": "تأمين صحي (موظفين/مقيمين)",
+      "renewal_service_id": "renew-health-insurance",
+      "related_service_ids": ["individuals-023"],
+      "reminder_offsets_days": [45, 30, 14, 7, 0],
+      "task_offset_days": 30,
+      "authority": "شركات التأمين المرخصة (عبر شريك)",
+      "facts": []
+    },
+    "passport": {
+      "name": "جواز سفر",
+      "renewal_service_id": null,
+      "related_service_ids": ["residency-018"],
+      "reminder_offsets_days": [180, 90, 30],
+      "task_offset_days": 90,
+      "authority": "جهة إصدار الجواز (سفارة الدولة للمقيمين)",
+      "facts": [],
+      "note": "تجديد الجواز نفسه ليس من خدمات المكتب؛ المكتب يحدّث معلومات الجواز بعد التجديد (residency-018)."
+    },
+    "exit_reentry_visa": {
+      "name": "تأشيرة خروج وعودة",
+      "renewal_service_id": "residency-011",
+      "reminder_offsets_days": [14, 7, 3, 0],
+      "task_offset_days": 7,
+      "authority": "المديرية العامة للجوازات",
+      "facts": []
+    },
+    "zakat_certificate": {
+      "name": "شهادة الزكاة والضريبة",
+      "renewal_service_id": "tax-zakat-012",
+      "reminder_offsets_days": [30, 14, 7, 0],
+      "task_offset_days": 30,
+      "authority": "هيئة الزكاة والضريبة والجمارك",
+      "facts": []
+    },
+    "gosi_certificate": {
+      "name": "شهادة التأمينات (شهادة المنشأة)",
+      "renewal_service_id": "wages-insurance-015",
+      "reminder_offsets_days": [30, 14, 7, 0],
+      "task_offset_days": 14,
+      "authority": "المؤسسة العامة للتأمينات الاجتماعية",
+      "facts": []
+    },
+    "employment_contract": {
+      "name": "عقد عمل",
+      "renewal_service_id": "hr-011",
+      "reminder_offsets_days": [60, 30, 14],
+      "task_offset_days": 30,
+      "authority": "وزارة الموارد البشرية (قوى)",
+      "facts": []
+    },
+    "other": {
+      "name": "مستند آخر",
+      "renewal_service_id": null,
+      "reminder_offsets_days": [30, 7, 0],
+      "task_offset_days": 30,
+      "authority": null,
+      "facts": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "حالات موثقة توضح التصرف الصحيح في مواقف متكررة. أمثلة إرشادية للنسخة الأولى؛ تُستبدل بحالات فعلية من سجل المكتب بعد اعتمادها."
+  },
+  "cases": [
+    {
+      "id": "case-discount-request",
+      "situation": "عميل يطلب خصماً أو استثناءً في السعر.",
+      "resolution": "لا يمنح الوكيل خصماً. تُنشأ مهمة تصعيد للمدير مع ملخص الطلب.",
+      "related_policy": "policy-office-06",
+      "source": { "name": "قواعد وكيل واتساب المعتمدة", "kind": "office" },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "case-unknown-service",
+      "situation": "طلب خدمة غير موجودة في كتالوج المكتب.",
+      "resolution": "لا يُنفى وجود الخدمة ولا تُخترع متطلباتها. تُحوَّل للمدير لتقرير إمكان تقديمها.",
+      "source": { "name": "قواعد وكيل واتساب المعتمدة", "kind": "office" },
+      "checked_at": "2026-10-20",
+      "approval": "approved"
+    },
+    {
+      "id": "case-expiry-conflict",
+      "situation": "الموظف يذكر تاريخ انتهاء إقامة يختلف عن المسجل في النظام.",
+      "resolution": "يُبلَّغ بالتعارض مع ذكر المصدر وتاريخ التحقق المسجل، وتُنشأ مهمة تحقق من أبشر/مقيم، ولا يُعدَّل التاريخ تلقائياً.",
+      "related_procedure": "proc-date-conflict",
+      "source": { "name": "مسودة تشغيلية", "kind": "proposal" },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    },
+    {
+      "id": "case-opted-out-client",
+      "situation": "عميل طلب إيقاف الرسائل وموعد تجديد إقامته يقترب.",
+      "resolution": "لا يُجهَّز تذكير للعميل. تُنشأ مهمة داخلية ليقرر الموظف التواصل المناسب.",
+      "related_policy": "policy-ops-03",
+      "source": { "name": "مسودة تشغيلية", "kind": "proposal" },
+      "checked_at": "2026-11-22",
+      "approval": "needs_approval"
+    }
+  ]
+}
