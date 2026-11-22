@@ -11,11 +11,13 @@ import { normalizeDateInput } from './dates.js';
 import { describeDocument } from './tools/definitions.js';
 import { runFollowups } from './followups.js';
 import { statusLabel } from './workflow.js';
+import { runEvalSuite, loadSuite } from './evals.js';
+import { newId } from './util.js';
 
 const PUBLIC_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../public/ops');
 const ID = { type: 'string', pattern: '^[a-z]+_[a-z0-9]+$', maxLength: 64 };
 
-const HTTP = { unauthorized: 401, forbidden: 403, not_found: 404, invalid_input: 400, invalid_date: 400, missing_data: 422, conflict: 409, no_change: 409, invalid_transition: 409, opted_out: 409 };
+const HTTP = { not_configured: 422, unauthorized: 401, forbidden: 403, not_found: 404, invalid_input: 400, invalid_date: 400, missing_data: 422, conflict: 409, no_change: 409, invalid_transition: 409, opted_out: 409 };
 
 const SCHEMAS = {
   client: {
@@ -188,6 +190,26 @@ export function createApp({ store, kb, ops, agent, config }) {
 
   // ===== الأتمتة (n8n / cron) =====
   api.post('/automation/followups', need('automation.run'), wrap((req) => runFollowups({ store, kb, ops, config, tenantId: T(req), actor: req.user })));
+
+  // ===== تقييم المهارات (للمالك فقط؛ يستهلك رصيد النموذج؛ يعمل على قاعدة في الذاكرة لا على بيانات التشغيل) =====
+  const evalJobs = new Map();
+  api.post('/admin/evals', need('evals.run'), wrap((req) => {
+    if ([...evalJobs.values()].some((j) => j.status === 'running')) throw new OpsError('conflict', 'يوجد تقييم قيد التشغيل.');
+    if (config.llm.provider === 'mock') throw new OpsError('not_configured', 'التقييم يحتاج النموذج الحقيقي (LLM_PROVIDER=anthropic).');
+    const only = Array.isArray(req.body?.only) ? req.body.only.map(String) : undefined;
+    const job = { id: newId('eval'), status: 'running', started_at: new Date().toISOString(), done: [], total: loadSuite().cases.filter((c) => !only || only.includes(c.id)).length };
+    evalJobs.set(job.id, job);
+    audit(store.db, { tenantId: T(req), userId: req.user.id, event: 'evals.started', detail: { job_id: job.id, only } });
+    runEvalSuite({ config, only, onCase: (e) => job.done.push({ id: e.id, pass: e.pass }) })
+      .then((result) => Object.assign(job, { status: 'finished', result, finished_at: new Date().toISOString() }))
+      .catch((e) => Object.assign(job, { status: 'failed', error: e.message }));
+    return { job_id: job.id, total: job.total };
+  }));
+  api.get('/admin/evals/:id', need('evals.run'), wrap((req) => {
+    const job = evalJobs.get(req.params.id);
+    if (!job) throw new OpsError('not_found', 'التقييم غير موجود.');
+    return job;
+  }));
 
   // ===== المعرفة والسجل =====
   api.get('/kb/search', need('read'), wrap((req) => kb.search(String(req.query.q || ''), { limit: 10 })));

@@ -89,3 +89,10 @@ test('صلاحيات الأتمتة والسجل: الموظف لا يشغّل �
   assert.equal(audit.status, 200);
   assert.ok(audit.body.some((a) => a.event === 'action.succeeded'));
 });
+
+test('تشغيل التقييم: للمالك فقط، ويرفض بوضوح إن كان النموذج محاكى', async () => {
+  assert.equal((await call('/api/admin/evals', tok('demo1_manager'), { method: 'POST' })).status, 403);
+  const r = await call('/api/admin/evals', tok('demo1_owner'), { method: 'POST' });
+  assert.equal(r.status, 422);
+  assert.match(r.body.error.message, /النموذج الحقيقي/);
+});

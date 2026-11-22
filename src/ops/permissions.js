@@ -13,6 +13,7 @@ const MATRIX = {
   'reminder.mark_sent':['owner', 'manager', 'staff'],
   'automation.run':    ['owner', 'manager', 'automation'],
   'audit.read':        ['owner', 'manager'],
+  'evals.run':         ['owner'],
 };
 
 export const can = (role, permission) => (MATRIX[permission] || []).includes(role);
